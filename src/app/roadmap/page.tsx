@@ -212,11 +212,6 @@ export default function RoadmapPage() {
                   text: "Host 3 AMA Calls on X/Twitter (1)",
                   status: StatusChoice.Cancelled,
                 },
-                {
-                  type: ItemType.Technical,
-                  text: "LABS Staking Platform",
-                  status: StatusChoice.InProgress,
-                },
               ]}
             />
 
