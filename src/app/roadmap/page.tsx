@@ -233,6 +233,11 @@ export default function RoadmapPage() {
                 },
                 {
                   type: ItemType.Technical,
+                  text: "Create Revshare Staking Program",
+                  status: StatusChoice.InProgress,
+                },
+                {
+                  type: ItemType.Technical,
                   text: "Create DOCS page",
                   status: StatusChoice.InProgress,
                 },
