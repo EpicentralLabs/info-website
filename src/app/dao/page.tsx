@@ -45,7 +45,7 @@ export default function DAOPage() {
                   size="lg" 
                   variant="outline"
                   className="transition-all duration-300 hover:scale-95 flex items-center"
-                  onClick={() => window.open('https://cabana.exchange/swap/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v-LABSh5DTebUcUbEoLzXKCiXFJLecDFiDWiBGUU1GpxR?daoRef=Epicentral', '_blank')}
+                  onClick={() => window.open('https://cabana.exchange/?partner=Epicentral', '_blank')}
                 >
                   <Image 
                     src="/cabana_logo.png" 
@@ -445,7 +445,7 @@ export default function DAOPage() {
                     </DropdownMenuItem>
                     <DropdownMenuItem 
                       className="text-white hover:bg-white/10 focus:bg-white/10 cursor-pointer flex items-center"
-                      onClick={() => window.open('https://cabana.exchange/swap/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v-LABSh5DTebUcUbEoLzXKCiXFJLecDFiDWiBGUU1GpxR?daoRef=Epicentral', '_blank')}
+                      onClick={() => window.open('https://cabana.exchange/?partner=Epicentral', '_blank')}
                     >
                       <Image 
                         src="/cabana_logo.png" 
