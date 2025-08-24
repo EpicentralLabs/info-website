@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowRight, ChevronDown, ExternalLink, FileSpreadsheet, Calculator, Users } from "lucide-react";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import Image from "next/image";
@@ -399,6 +399,159 @@ export default function DAOPage() {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Public DAO Resources Section */}
+      <section className="container mx-auto px-4 py-24">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-light text-white/90 mb-16 text-center drop-shadow-[0_0_0.3rem_#ffffff70]">
+            Public DAO Resources
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Contributor Rewards Program Tracker */}
+            <div className="group relative bg-gradient-to-br from-black/40 to-black/20 backdrop-blur-md border border-white/10 rounded-xl p-8 hover:border-[#4a85ff]/30 transition-all duration-300 hover:shadow-[0_0_30px_rgba(74,133,255,0.1)]">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#4a85ff]/5 rounded-full blur-3xl"></div>
+              <div className="relative space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#4a85ff]/20 to-[#4a85ff]/10 flex items-center justify-center flex-shrink-0">
+                    <Calculator className="w-7 h-7 text-[#4a85ff]" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-medium text-white/90 mb-2">
+                      Contributor Rewards Tracker
+                    </h3>
+                    <p className="text-base text-white/70 mb-6">
+                      Track your contributions and calculate your $LABS rewards based on commits, lines of code, and issue resolutions.
+                    </p>
+                    
+                    {/* Rewards Summary */}
+                    <div className="space-y-3 mb-6">
+                      <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                        <h4 className="text-sm font-medium text-[#4a85ff] mb-2">Contribution Rewards</h4>
+                        <div className="space-y-2 text-sm">
+                          <div className="flex justify-between">
+                            <span className="text-white/60">Per Commit (First 10)</span>
+                            <span className="text-white/90 font-mono">50 LABS</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-white/60">Per Commit (10+)</span>
+                            <span className="text-white/90 font-mono">25 LABS</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-white/60">Per Line Added</span>
+                            <span className="text-white/90 font-mono">10 LABS</span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-white/5 rounded-lg p-4 border border-white/10">
+                        <h4 className="text-sm font-medium text-[#4a85ff] mb-2">Issue Priority Bonuses</h4>
+                        <div className="space-y-2 text-sm">
+                          <div className="flex justify-between">
+                            <span className="text-white/60">Low Priority</span>
+                            <span className="text-white/90 font-mono">1,000 LABS</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-white/60">Medium Priority</span>
+                            <span className="text-white/90 font-mono">5,000 LABS</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-white/60">High Priority</span>
+                            <span className="text-white/90 font-mono">10,000 LABS</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <Button 
+                      size="sm"
+                      className="w-full bg-[#4a85ff]/10 hover:bg-[#4a85ff]/20 border border-[#4a85ff]/30 text-[#4a85ff] transition-all duration-300 group-hover:border-[#4a85ff]/50"
+                      onClick={() => window.open('https://docs.google.com/spreadsheets/d/1cYitKSv6AkHZzwDW9_7U_sMcLR1sQr-VaBGnX1FKc9c/edit?usp=sharing', '_blank')}
+                    >
+                      View Full Tracker
+                      <ExternalLink className="ml-2 h-4 w-4" />
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Core Team Multisig Public Budget Sheet */}
+            <div className="group relative bg-gradient-to-br from-black/40 to-black/20 backdrop-blur-md border border-white/10 rounded-xl p-8 hover:border-[#4a85ff]/30 transition-all duration-300 hover:shadow-[0_0_30px_rgba(74,133,255,0.1)]">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#4a85ff]/5 rounded-full blur-3xl"></div>
+              <div className="relative space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#4a85ff]/20 to-[#4a85ff]/10 flex items-center justify-center flex-shrink-0">
+                    <FileSpreadsheet className="w-7 h-7 text-[#4a85ff]" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-medium text-white/90 mb-2">
+                      Core Team Budget Sheet
+                    </h3>
+                    <p className="text-base text-white/70 mb-6">
+                      Full transparency into the Core Team's multisig wallet operations, budget allocations, and financial decisions.
+                    </p>
+                    
+                    {/* Budget Highlights */}
+                    <div className="bg-white/5 rounded-lg p-4 border border-white/10 mb-6">
+                      <h4 className="text-sm font-medium text-[#4a85ff] mb-3">Budget Transparency Features</h4>
+                      <div className="space-y-3">
+                        <div className="flex items-start gap-3">
+                          <div className="w-5 h-5 rounded bg-[#4a85ff]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <div className="w-2 h-2 rounded-full bg-[#4a85ff]"></div>
+                          </div>
+                          <p className="text-sm text-white/70">Real-time tracking of multisig transactions</p>
+                        </div>
+                        <div className="flex items-start gap-3">
+                          <div className="w-5 h-5 rounded bg-[#4a85ff]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <div className="w-2 h-2 rounded-full bg-[#4a85ff]"></div>
+                          </div>
+                          <p className="text-sm text-white/70">Detailed expense categorization</p>
+                        </div>
+                        <div className="flex items-start gap-3">
+                          <div className="w-5 h-5 rounded bg-[#4a85ff]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <div className="w-2 h-2 rounded-full bg-[#4a85ff]"></div>
+                          </div>
+                          <p className="text-sm text-white/70">Monthly budget reports and forecasts</p>
+                        </div>
+                        <div className="flex items-start gap-3">
+                          <div className="w-5 h-5 rounded bg-[#4a85ff]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <div className="w-2 h-2 rounded-full bg-[#4a85ff]"></div>
+                          </div>
+                          <p className="text-sm text-white/70">Community-accessible audit trail</p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <Button 
+                      size="sm"
+                      className="w-full bg-[#4a85ff]/10 hover:bg-[#4a85ff]/20 border border-[#4a85ff]/30 text-[#4a85ff] transition-all duration-300 group-hover:border-[#4a85ff]/50"
+                      onClick={() => window.open('https://docs.google.com/spreadsheets/d/1cYitKSv6AkHZzwDW9_7U_sMcLR1sQr-VaBGnX1FKc9c/edit?usp=sharing', '_blank')}
+                    >
+                      View Budget Sheet
+                      <ExternalLink className="ml-2 h-4 w-4" />
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Additional Resources Card */}
+          <div className="mt-8 bg-gradient-to-br from-black/40 to-black/20 backdrop-blur-md border border-white/10 rounded-xl p-6">
+            <div className="flex items-center gap-4">
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#4a85ff]/20 to-[#4a85ff]/10 flex items-center justify-center">
+                <Users className="w-5 h-5 text-[#4a85ff]" />
+              </div>
+              <div className="flex-1">
+                <p className="text-sm text-white/70">
+                  All DAO resources are publicly accessible to ensure complete transparency. Community members can audit, verify, and participate in the governance process.
+                </p>
               </div>
             </div>
           </div>
