@@ -45,7 +45,7 @@ export default function DAOPage() {
                   size="lg" 
                   variant="outline"
                   className="transition-all duration-300 hover:scale-95 flex items-center"
-                  onClick={() => window.open('https://cabana.exchange/?partner=Epicentral', '_blank')}
+                  onClick={() => window.open('https://cabana.exchange/?partner=Epicentral', '_blank', 'noopener,noreferrer')}
                 >
                   <Image 
                     src="/cabana_logo.png" 
