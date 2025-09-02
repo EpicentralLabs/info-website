@@ -40,7 +40,7 @@ export default function FundingParticipantsPage() {
   const formatNumber = (num: number) => {
     return new Intl.NumberFormat('en-US', {
       minimumFractionDigits: 0,
-      maximumFractionDigits: 2,
+      maximumFractionDigits: 0,
     }).format(num);
   };
 
@@ -61,7 +61,7 @@ export default function FundingParticipantsPage() {
         <main className="flex-1 flex items-center justify-center min-h-[80vh] pt-48">
           <div className="text-center space-y-4">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#4a85ff] mx-auto"></div>
-            <p className="text-white/70">Loading funding participants data...</p>
+            <p className="text-white/70">Loading fundraiser participants data...</p>
           </div>
         </main>
         <Footer />
@@ -98,30 +98,43 @@ export default function FundingParticipantsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             {/* Header */}
-            <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-                <span className="font-extralight drop-shadow-[0_0_0.3rem_#ffffff70]">
-                  Funding Participants
-                </span>
+            <div className="text-center mb-16">
+              <h1 className="text-5xl md:text-6xl font-bold mb-4">
+                <span className="text-white">Fundraising Campaign</span>
+                <span className="text-[#4a85ff] ml-3">Participants</span>
               </h1>
-              <p className="text-xl text-white/70 max-w-3xl mx-auto">
-                Buyers who purchased $LABS tokens directly from our treasury wallet
+              
+              <p className="text-xl text-white/70 mb-10 max-w-2xl mx-auto">
+                Buyers who purchased $LABS tokens from Epicentral Labs DAO treasury wallet
               </p>
               
-                            {/* Benefits Banner */}
-              <div className="mt-6 p-4 bg-gradient-to-br from-[#4a85ff]/20 to-[#4a85ff]/10 rounded-xl border border-[#4a85ff]/30 max-w-3xl mx-auto">
-                <p className="text-white/90 text-center">
-                  <strong>The wallets below qualify to earn 10% of all OPX fees</strong> for 2 months post-launch! Revenue distributed proportionally to all buyers. 
-                  <span className="text-sm block mt-2 text-white/70">
-                    Terms: Buyers must hold their purchased $LABS tokens until Sept 30, 2025 to qualify.
-                  </span>
-                </p>
-              </div>
-
-              <div className="mt-4 p-4 bg-gradient-to-br from-white/5 to-white/[0.02] rounded-xl border border-white/10 max-w-2xl mx-auto">
-                <p className="text-sm text-white/60">
-                  <span className="text-[#4a85ff] font-mono">Treasury Wallet:</span> 3BEvopNQ89zkM4r6ADva18i5fao1sqR1pmswyQyfj838
-                </p>
+              {/* Key Benefits */}
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 max-w-4xl mx-auto mb-8">
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-3">Revenue Share</h3>
+                    <p className="text-white/80 mb-4">
+                      Earn <span className="text-[#4a85ff] font-bold text-xl">10%</span> of all OPX fees for 2 months post-launch
+                    </p>
+                    <p className="text-sm text-white/60">
+                      Must hold $LABS tokens until Sept 30, 2025
+                    </p>
+                  </div>
+                  
+                  <div className="bg-black/30 rounded-xl p-4">
+                    <p className="text-xs text-white/60 mb-2">Treasury Wallet</p>
+                    <p className="font-mono text-sm text-[#4a85ff] break-all">
+                      <a 
+                        href="https://v2.realms.today/dao/5PP7vKjJyLw1MR55LoexRsCj3CpZj9MdD6aNXRrvxG42/proposals" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="underline hover:text-[#4a85ff] transition-colors"
+                      >
+                        3BEvopNQ89zkM4r6ADva18i5fao1sqR1pmswyQyfj838
+                      </a>
+                    </p>
+                  </div>
+                </div>
               </div>
               
               {/* Summary Stats */}
