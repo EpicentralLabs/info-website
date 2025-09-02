@@ -89,6 +89,38 @@ export default function Footer() {
             </Link>
           </div>
 
+          {/* Navigation Links */}
+          <div className="flex items-center space-x-6 text-sm">
+            <Link 
+              href="/funding-participants"
+              className="text-white/70 hover:text-white transition-all duration-300 
+                         hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]"
+            >
+              Funding Participants
+            </Link>
+            <Link 
+              href="/roadmap"
+              className="text-white/70 hover:text-white transition-all duration-300 
+                         hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]"
+            >
+              Roadmap
+            </Link>
+            <Link 
+              href="/labs-token"
+              className="text-white/70 hover:text-white transition-all duration-300 
+                         hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]"
+            >
+              Tokenomics
+            </Link>
+            <Link 
+              href="/dao"
+              className="text-white/70 hover:text-white transition-all duration-300 
+                         hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]"
+            >
+              DAO
+            </Link>
+          </div>
+
           {/* Copyright Text */}
           <span className="text-sm text-white/60">
             © 2025 Epicentral Labs | Powered by <a href="https://solana.com" className="text-[#4a85ff] hover:drop-shadow-[0_0_8px_#4a85ff] transition-all duration-300">Solana</a>
