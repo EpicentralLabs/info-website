@@ -111,10 +111,11 @@ export default function FundingParticipantsPage() {
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-3">Revenue Share</h3>
                     <p className="text-white/80 mb-4">
-                      Earn <span className="text-[#4a85ff] font-bold text-xl">10%</span> of all OPX fees for 2 months post-launch
+                      Earn <span className="text-[#4a85ff] font-bold text-xl">10%</span> of all OPX fees for 2 months post-launch*
                     </p>
-                    <p className="text-sm text-white/60">
-                      Must hold $LABS tokens until Sept 30, 2025
+                    <p className="text-xs text-white/60">
+                      * Must hold $LABS tokens until Sept 30, 2025 <br />
+                      * OPX launch date is TBD
                     </p>
                   </div>
                   
@@ -165,7 +166,7 @@ export default function FundingParticipantsPage() {
             </div>
 
             {/* Leaderboard Table */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-3 md:p-8 lg:p-12 
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 md:p-6 lg:p-8 
                             hover:border-white/20 transition-all duration-500
                             shadow-[0_0_15px_rgba(0,0,0,0.2)]">
               <h2 className="text-xl md:text-2xl lg:text-3xl font-light text-white/90 mb-2 md:mb-6 drop-shadow-[0_0_0.3rem_#ffffff70]
