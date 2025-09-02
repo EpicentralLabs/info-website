@@ -98,62 +98,46 @@ export default function FundingParticipantsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             {/* Header */}
-            <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-4">
+            <div className="text-center mb-8 md:mb-16">
+              <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-tight mb-6">
                 <span className="font-extralight drop-shadow-[0_0_0.3rem_#ffffff70] text-white">Fundraising Campaign</span>
-                <span className="font-extralight drop-shadow-[0_0_0.3rem_#ffffff70] text-[#4a85ff] ml-3">Participants</span>
+                <br className="sm:hidden" />
+                <span className="font-extralight drop-shadow-[0_0_0.3rem_#ffffff70] text-[#4a85ff] sm:ml-3">Participants</span>
               </h1>
-              <p className="text-xl text-white/70 mb-10 max-w-2xl mx-auto">
-              </p>
+              
               {/* Key Benefits */}
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 max-w-4xl mx-auto mb-8">
-                <div className="grid md:grid-cols-2 gap-8 items-center">
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-3">Revenue Share</h3>
-                    <p className="text-white/80 mb-4">
-                      Earn <span className="text-[#4a85ff] font-bold text-xl">10%</span> of all OPX fees for 2 months post-launch*
-                    </p>
-                    <p className="text-xs text-white/60">
-                      * Must hold $LABS tokens until Sept 30, 2025 <br />
-                      * OPX launch date is TBD
-                    </p>
-                  </div>
-                  
-                  <div className="bg-black/30 rounded-xl p-4">
-                    <p className="text-xs text-white/60 mb-2">Treasury Wallet</p>
-                    <p className="font-mono text-sm text-[#4a85ff] break-all">
-                      <a 
-                        href="https://v2.realms.today/dao/5PP7vKjJyLw1MR55LoexRsCj3CpZj9MdD6aNXRrvxG42/proposals" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="underline hover:text-[#4a85ff] transition-colors"
-                      >
-                        3BEvopNQ89zkM4r6ADva18i5fao1sqR1pmswyQyfj838
-                      </a>
-                    </p>
-                  </div>
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 md:p-8 max-w-4xl mx-auto mb-6 md:mb-8">
+                <div className="text-center">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-3">Revenue Share</h3>
+                  <p className="text-base md:text-lg text-white/80 mb-4">
+                    Earn <span className="text-[#4a85ff] font-bold text-lg md:text-lg">10%</span> of all OPX fees for 2 months post-launch*
+                  </p>
+                  <p className="text-xs text-white/60">
+                    * Must hold $LABS tokens until Sept 30, 2025 <br />
+                    * OPX launch date is TBD
+                  </p>
                 </div>
               </div>
               
               {/* Summary Stats */}
-              <div className="flex flex-wrap justify-center gap-6 mt-8">
-                <div className="bg-gradient-to-br from-white/5 to-white/[0.02] rounded-xl p-4 border border-white/10">
-                  <div className="text-2xl font-bold text-[#4a85ff]">
+              <div className="grid grid-cols-3 gap-3 md:flex md:flex-wrap md:justify-center md:gap-6 mt-8 max-w-xl md:max-w-none mx-auto">
+                <div className="bg-gradient-to-br from-white/5 to-white/[0.02] rounded-xl p-3 md:p-4 border border-white/10">
+                  <div className="text-lg md:text-2xl font-bold text-[#4a85ff]">
                     {participantsData.length}
                   </div>
-                  <div className="text-sm text-white/70">Unique Buyers</div>
+                  <div className="text-xs md:text-sm text-white/70">Unique Buyers</div>
                 </div>
-                <div className="bg-gradient-to-br from-white/5 to-white/[0.02] rounded-xl p-4 border border-white/10">
-                  <div className="text-2xl font-bold text-[#4a85ff]">
+                <div className="bg-gradient-to-br from-white/5 to-white/[0.02] rounded-xl p-3 md:p-4 border border-white/10">
+                  <div className="text-lg md:text-2xl font-bold text-[#4a85ff]">
                     {formatNumber(participantsData.reduce((sum, entry) => sum + entry.labsQuantity, 0))}
                   </div>
-                  <div className="text-sm text-white/70">Total $LABS Bought</div>
+                  <div className="text-xs md:text-sm text-white/70">Total $LABS Bought</div>
                 </div>
-                <div className="bg-gradient-to-br from-white/5 to-white/[0.02] rounded-xl p-4 border border-white/10">
-                  <div className="text-2xl font-bold text-[#4a85ff]">
+                <div className="bg-gradient-to-br from-white/5 to-white/[0.02] rounded-xl p-3 md:p-4 border border-white/10">
+                  <div className="text-lg md:text-2xl font-bold text-[#4a85ff]">
                     $10,000
                   </div>
-                  <div className="text-sm text-white/70">USDC</div>
+                  <div className="text-xs md:text-sm text-white/70">USDC</div>
                 </div>
               </div>
             </div>
@@ -288,41 +272,41 @@ export default function FundingParticipantsPage() {
                 </div>
 
                 {/* Mobile Cards */}
-                <div className="md:hidden space-y-4">
-                  {participantsData.slice(0, 20).map((entry) => (
+                <div className="md:hidden space-y-3">
+                  {participantsData.slice(0, 50).map((entry) => (
                     <div 
                       key={entry.walletAddress}
                       className="bg-gradient-to-br from-white/5 to-white/[0.02] rounded-xl p-4 border border-white/10"
                     >
-                      <div className="mb-3">
+                      <div className="mb-4">
                         <a 
                           href={`https://solscan.io/account/${entry.walletAddress}`}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="font-mono text-white/90 hover:text-white/70 transition-colors duration-300 text-sm inline-flex items-center gap-1"
+                          className="font-mono text-white/90 hover:text-white/70 transition-colors duration-300 text-base inline-flex items-center gap-2"
                         >
                           {formatWalletAddress(entry.walletAddress)}
-                          <svg className="w-3 h-3 opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <svg className="w-4 h-4 opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                           </svg>
                         </a>
                       </div>
-                      <div className="grid grid-cols-3 gap-4 text-sm">
-                        <div>
+                      <div className="grid grid-cols-1 gap-3 text-sm">
+                        <div className="flex justify-between items-center">
                           <div className="text-white/60">$LABS Quantity</div>
-                          <div className="font-semibold text-[#4a85ff]">
+                          <div className="font-semibold text-[#4a85ff] text-base">
                             {formatNumber(entry.labsQuantity)}
                           </div>
                         </div>
-                        <div>
-                          <div className="text-white/60">% Allocation</div>
-                          <div className="text-white/80">
+                        <div className="flex justify-between items-center">
+                          <div className="text-white/60">% Contributed</div>
+                          <div className="text-white/80 text-base">
                             {formatPercentage(entry.percentageAllocation)}
                           </div>
                         </div>
-                        <div>
-                          <div className="text-white/60">Net Revenue Alloc.</div>
-                          <div className="text-green-400 font-semibold">
+                        <div className="flex justify-between items-center">
+                          <div className="text-white/60">Revenue Share</div>
+                          <div className="text-green-400 font-semibold text-base">
                             {formatPercentage(entry.percentageAllocation * 0.1)}
                           </div>
                         </div>
