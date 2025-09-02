@@ -148,6 +148,12 @@ export default function FundingParticipantsPage() {
                   </div>
                   <div className="text-sm text-white/70">Total $LABS Bought</div>
                 </div>
+                <div className="bg-gradient-to-br from-white/5 to-white/[0.02] rounded-xl p-4 border border-white/10">
+                  <div className="text-2xl font-bold text-[#4a85ff]">
+                    $10,000
+                  </div>
+                  <div className="text-sm text-white/70">USDC</div>
+                </div>
               </div>
             </div>
 
@@ -188,9 +194,12 @@ export default function FundingParticipantsPage() {
                               href={`https://solscan.io/account/${entry.walletAddress}`}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="font-mono text-white/90 hover:text-white/70 transition-colors duration-300"
+                              className="font-mono text-white/90 hover:text-white/70 transition-colors duration-300 inline-flex items-center gap-1"
                             >
                               {formatWalletAddress(entry.walletAddress)}
+                              <svg className="w-3 h-3 opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                              </svg>
                             </a>
                           </td>
                           <td className="py-4 px-2 text-right">
@@ -221,9 +230,12 @@ export default function FundingParticipantsPage() {
                           href={`https://solscan.io/account/${entry.walletAddress}`}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="font-mono text-white/90 hover:text-white/70 transition-colors duration-300 text-sm"
+                          className="font-mono text-white/90 hover:text-white/70 transition-colors duration-300 text-sm inline-flex items-center gap-1"
                         >
                           {formatWalletAddress(entry.walletAddress)}
+                          <svg className="w-3 h-3 opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
                         </a>
                       </div>
                       <div className="grid grid-cols-2 gap-4 text-sm">
