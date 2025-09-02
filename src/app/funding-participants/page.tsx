@@ -99,9 +99,9 @@ export default function FundingParticipantsPage() {
           <div className="max-w-6xl mx-auto">
             {/* Header */}
             <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold mb-4">
-                <span className="text-white">Fundraising Campaign</span>
-                <span className="text-[#4a85ff] ml-3">Participants</span>
+              <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-4">
+                <span className="font-extralight drop-shadow-[0_0_0.3rem_#ffffff70] text-white">Fundraising Campaign</span>
+                <span className="font-extralight drop-shadow-[0_0_0.3rem_#ffffff70] text-[#4a85ff] ml-3">Participants</span>
               </h1>
               <p className="text-xl text-white/70 mb-10 max-w-2xl mx-auto">
               </p>
