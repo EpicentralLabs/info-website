@@ -176,10 +176,16 @@ export default function FundingParticipantsPage() {
 
                 {/* Desktop Table */}
                 <div className="hidden md:block overflow-x-auto">
-                  <table className="w-full">
+                  <table className="w-full table-fixed">
+                    <colgroup>
+                      <col className="w-[30%]" />
+                      <col className="w-[25%]" />
+                      <col className="w-[22.5%]" />
+                      <col className="w-[22.5%]" />
+                    </colgroup>
                     <thead>
                       <tr className="border-b border-white/10">
-                        <th className="text-left py-4 px-2 text-white/80 font-medium">
+                        <th className="text-left py-4 px-4 text-white/80 font-medium">
                           <div className="flex items-center gap-2">
                             Wallet Address
                             <div className="relative group">
@@ -194,7 +200,7 @@ export default function FundingParticipantsPage() {
                             </div>
                           </div>
                         </th>
-                        <th className="text-right py-4 px-2 text-white/80 font-medium">
+                        <th className="text-right py-4 px-4 text-white/80 font-medium">
                           <div className="flex items-center justify-end gap-2">
                             $LABS Quantity
                             <div className="relative group">
@@ -209,7 +215,7 @@ export default function FundingParticipantsPage() {
                             </div>
                           </div>
                         </th>
-                        <th className="text-right py-4 px-2 text-white/80 font-medium">
+                        <th className="text-right py-4 px-4 text-white/80 font-medium">
                           <div className="flex items-center justify-end gap-2">
                             % Contributed
                             <div className="relative group">
@@ -224,7 +230,7 @@ export default function FundingParticipantsPage() {
                             </div>
                           </div>
                         </th>
-                        <th className="text-right py-4 px-2 text-white/80 font-medium">
+                        <th className="text-right py-4 px-4 text-white/80 font-medium">
                           <div className="flex items-center justify-end gap-2">
                             Net Revenue Allocation
                             <div className="relative group">
@@ -247,7 +253,7 @@ export default function FundingParticipantsPage() {
                           key={entry.walletAddress} 
                           className="border-b border-white/5 hover:bg-white/5 transition-colors"
                         >
-                          <td className="py-4 px-2">
+                          <td className="py-4 px-4">
                             <a 
                               href={`https://solscan.io/account/${entry.walletAddress}`}
                               target="_blank"
@@ -260,17 +266,17 @@ export default function FundingParticipantsPage() {
                               </svg>
                             </a>
                           </td>
-                          <td className="py-4 px-2 text-right">
+                          <td className="py-4 px-4 text-right">
                             <div className="font-semibold text-[#4a85ff]">
                               {formatNumber(entry.labsQuantity)}
                             </div>
                           </td>
-                          <td className="py-4 px-2 text-right">
+                          <td className="py-4 px-4 text-right">
                             <div className="text-white/80">
                               {formatPercentage(entry.percentageAllocation)}
                             </div>
                           </td>
-                          <td className="py-4 px-2 text-right">
+                          <td className="py-4 px-4 text-right">
                             <div className="text-green-400 font-semibold">
                               {formatPercentage(entry.percentageAllocation * 0.1)}
                             </div>
