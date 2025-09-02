@@ -179,9 +179,66 @@ export default function FundingParticipantsPage() {
                   <table className="w-full">
                     <thead>
                       <tr className="border-b border-white/10">
-                        <th className="text-left py-4 px-2 text-white/80 font-medium">Wallet Address</th>
-                        <th className="text-right py-4 px-2 text-white/80 font-medium">$LABS Quantity</th>
-                        <th className="text-right py-4 px-2 text-white/80 font-medium">% Allocation</th>
+                        <th className="text-left py-4 px-2 text-white/80 font-medium">
+                          <div className="flex items-center gap-2">
+                            Wallet Address
+                            <div className="relative group">
+                              <svg className="w-4 h-4 text-white/40 hover:text-white/70 transition-colors cursor-help" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                              </svg>
+                              <div className="absolute left-1/2 -translate-x-1/2 top-6 z-20 opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-200 whitespace-nowrap">
+                                <div className="bg-black/80 backdrop-blur-md border border-white/20 rounded-lg p-2 shadow-lg">
+                                  <p className="text-xs text-white/90">Solana wallet address of the participant</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </th>
+                        <th className="text-right py-4 px-2 text-white/80 font-medium">
+                          <div className="flex items-center justify-end gap-2">
+                            $LABS Quantity
+                            <div className="relative group">
+                              <svg className="w-4 h-4 text-white/40 hover:text-white/70 transition-colors cursor-help" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                              </svg>
+                              <div className="absolute right-0 top-6 z-20 opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-200 whitespace-nowrap">
+                                <div className="bg-black/80 backdrop-blur-md border border-white/20 rounded-lg p-2 shadow-lg">
+                                  <p className="text-xs text-white/90">Amount of $LABS tokens purchased</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </th>
+                        <th className="text-right py-4 px-2 text-white/80 font-medium">
+                          <div className="flex items-center justify-end gap-2">
+                            % Contributed
+                            <div className="relative group">
+                              <svg className="w-4 h-4 text-white/40 hover:text-white/70 transition-colors cursor-help" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                              </svg>
+                              <div className="absolute right-0 top-6 z-20 opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-200 whitespace-nowrap">
+                                <div className="bg-black/80 backdrop-blur-md border border-white/20 rounded-lg p-2 shadow-lg">
+                                  <p className="text-xs text-white/90">Percentage of total fundraising contribution</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </th>
+                        <th className="text-right py-4 px-2 text-white/80 font-medium">
+                          <div className="flex items-center justify-end gap-2">
+                            Net Revenue Allocation
+                            <div className="relative group">
+                              <svg className="w-4 h-4 text-white/40 hover:text-white/70 transition-colors cursor-help" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                              </svg>
+                              <div className="absolute right-0 top-6 z-20 opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-200 whitespace-nowrap">
+                                <div className="bg-black/80 backdrop-blur-md border border-white/20 rounded-lg p-2 shadow-lg">
+                                  <p className="text-xs text-white/90">Share of the 10% OPX revenue for 2 months</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </th>
                       </tr>
                     </thead>
                     <tbody>
@@ -213,6 +270,11 @@ export default function FundingParticipantsPage() {
                               {formatPercentage(entry.percentageAllocation)}
                             </div>
                           </td>
+                          <td className="py-4 px-2 text-right">
+                            <div className="text-green-400 font-semibold">
+                              {formatPercentage(entry.percentageAllocation * 0.1)}
+                            </div>
+                          </td>
                         </tr>
                       ))}
                     </tbody>
@@ -239,7 +301,7 @@ export default function FundingParticipantsPage() {
                           </svg>
                         </a>
                       </div>
-                      <div className="grid grid-cols-2 gap-4 text-sm">
+                      <div className="grid grid-cols-3 gap-4 text-sm">
                         <div>
                           <div className="text-white/60">$LABS Quantity</div>
                           <div className="font-semibold text-[#4a85ff]">
@@ -250,6 +312,12 @@ export default function FundingParticipantsPage() {
                           <div className="text-white/60">% Allocation</div>
                           <div className="text-white/80">
                             {formatPercentage(entry.percentageAllocation)}
+                          </div>
+                        </div>
+                        <div>
+                          <div className="text-white/60">Net Revenue Alloc.</div>
+                          <div className="text-green-400 font-semibold">
+                            {formatPercentage(entry.percentageAllocation * 0.1)}
                           </div>
                         </div>
                       </div>
