@@ -105,39 +105,44 @@ export default function FundingParticipantsPage() {
                 <span className="font-extralight drop-shadow-[0_0_0.3rem_#ffffff70] text-[#4a85ff] sm:ml-3">Participants</span>
               </h1>
               
-              {/* Key Benefits */}
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 md:p-8 max-w-4xl mx-auto mb-6 md:mb-8">
-                <div className="text-center">
-                  <h3 className="text-xl md:text-2xl font-bold text-white mb-3">Revenue Share</h3>
-                  <p className="text-base md:text-lg text-white/80 mb-4">
-                    Earn <span className="text-[#4a85ff] font-bold text-lg md:text-lg">10%</span> of all OPX fees for 2 months post-launch*
-                  </p>
-                  <p className="text-xs text-white/60">
-                    * Must hold $LABS tokens until Sept 30, 2025 <br />
-                    * OPX launch date is TBD
-                  </p>
-                </div>
-              </div>
-              
-              {/* Summary Stats */}
-              <div className="grid grid-cols-3 gap-3 md:flex md:flex-wrap md:justify-center md:gap-6 mt-8 max-w-xl md:max-w-none mx-auto">
-                <div className="bg-gradient-to-br from-white/5 to-white/[0.02] rounded-xl p-3 md:p-4 border border-white/10">
-                  <div className="text-lg md:text-2xl font-bold text-[#4a85ff]">
-                    {participantsData.length}
+              {/* Revenue Share & Stats Combined */}
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 md:p-8 max-w-6xl mx-auto mb-12">
+                <div className="flex flex-col lg:flex-row lg:items-center gap-8">
+                  {/* Revenue Share Info - Left Side */}
+                  <div className="flex-1 text-center lg:text-left">
+                    <h3 className="text-xl md:text-2xl font-bold text-white mb-3">OPX Revenue Share Incentive</h3>
+                    <p className="text-base md:text-lg text-white/80 mb-4">
+                      Earn <span className="text-[#4a85ff] font-bold text-lg md:text-lg">10%</span> of all OPX fees for 2 months post-launch*
+                    </p>
+                    <p className="text-xs text-white/60">
+                      * Must hold $LABS tokens until Sept 30, 2025 <br />
+                      * OPX launch date is TBD
+                    </p>
                   </div>
-                  <div className="text-xs md:text-sm text-white/70">Unique Buyers</div>
-                </div>
-                <div className="bg-gradient-to-br from-white/5 to-white/[0.02] rounded-xl p-3 md:p-4 border border-white/10">
-                  <div className="text-lg md:text-2xl font-bold text-[#4a85ff]">
-                    {formatNumber(participantsData.reduce((sum, entry) => sum + entry.labsQuantity, 0))}
+                  
+                  {/* Stats Grid - Right Side */}
+                  <div className="flex-shrink-0">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3 gap-4 lg:gap-3">
+                      <div className="bg-gradient-to-br from-white/5 to-white/[0.02] rounded-xl p-4 border border-white/10 text-center min-w-[140px]">
+                        <div className="text-lg md:text-xl font-bold text-[#4a85ff]">
+                          {participantsData.length}
+                        </div>
+                        <div className="text-xs text-white/70">Unique Buyers</div>
+                      </div>
+                      <div className="bg-gradient-to-br from-white/5 to-white/[0.02] rounded-xl p-4 border border-white/10 text-center min-w-[140px]">
+                        <div className="text-lg md:text-xl font-bold text-[#4a85ff]">
+                          {formatNumber(participantsData.reduce((sum, entry) => sum + entry.labsQuantity, 0))}
+                        </div>
+                        <div className="text-xs text-white/70">Total $LABS Bought</div>
+                      </div>
+                      <div className="bg-gradient-to-br from-white/5 to-white/[0.02] rounded-xl p-4 border border-white/10 text-center min-w-[140px]">
+                        <div className="text-lg md:text-xl font-bold text-[#4a85ff]">
+                          $10,000
+                        </div>
+                        <div className="text-xs text-white/70">USDC</div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="text-xs md:text-sm text-white/70">Total $LABS Bought</div>
-                </div>
-                <div className="bg-gradient-to-br from-white/5 to-white/[0.02] rounded-xl p-3 md:p-4 border border-white/10">
-                  <div className="text-lg md:text-2xl font-bold text-[#4a85ff]">
-                    $10,000
-                  </div>
-                  <div className="text-xs md:text-sm text-white/70">USDC</div>
                 </div>
               </div>
             </div>
@@ -216,7 +221,7 @@ export default function FundingParticipantsPage() {
                         </th>
                         <th className="text-right py-4 px-4 text-white/80 font-medium">
                           <div className="flex items-center justify-end gap-2">
-                            Net Revenue Allocation
+                            % Revenue Allocation
                             <div className="relative group">
                               <svg className="w-4 h-4 text-white/40 hover:text-white/70 transition-colors cursor-help" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
