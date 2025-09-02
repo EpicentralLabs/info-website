@@ -103,11 +103,8 @@ export default function FundingParticipantsPage() {
                 <span className="text-white">Fundraising Campaign</span>
                 <span className="text-[#4a85ff] ml-3">Participants</span>
               </h1>
-              
               <p className="text-xl text-white/70 mb-10 max-w-2xl mx-auto">
-                Buyers who purchased $LABS tokens from Epicentral Labs DAO treasury wallet
               </p>
-              
               {/* Key Benefits */}
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 max-w-4xl mx-auto mb-8">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -162,16 +159,13 @@ export default function FundingParticipantsPage() {
             </div>
 
             {/* Leaderboard Table */}
-            <Card className="bg-gradient-to-br from-black/40 to-black/20 backdrop-blur-md border border-white/10 overflow-hidden">
-              <div className="p-6">
-                <h2 className="text-2xl font-bold text-white/90 mb-6 flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#4a85ff]/20 to-[#4a85ff]/10 flex items-center justify-center">
-                    <svg className="w-5 h-5 text-[#4a85ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                    </svg>
-                  </div>
-                  Top Buyers from Treasury
-                </h2>
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-3 md:p-8 lg:p-12 
+                            hover:border-white/20 transition-all duration-500
+                            shadow-[0_0_15px_rgba(0,0,0,0.2)]">
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-light text-white/90 mb-2 md:mb-6 drop-shadow-[0_0_0.3rem_#ffffff70]
+                             text-center">
+                Top 100 Participants
+              </h2>
 
                 {/* Desktop Table */}
                 <div className="hidden md:block overflow-x-auto">
@@ -184,15 +178,20 @@ export default function FundingParticipantsPage() {
                       </tr>
                     </thead>
                     <tbody>
-                      {participantsData.slice(0, 50).map((entry) => (
+                      {participantsData.slice(0, 100).map((entry) => (
                         <tr 
                           key={entry.walletAddress} 
                           className="border-b border-white/5 hover:bg-white/5 transition-colors"
                         >
                           <td className="py-4 px-2">
-                            <div className="font-mono text-white/90">
+                            <a 
+                              href={`https://solscan.io/account/${entry.walletAddress}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="font-mono text-white/90 hover:text-white/70 transition-colors duration-300"
+                            >
                               {formatWalletAddress(entry.walletAddress)}
-                            </div>
+                            </a>
                           </td>
                           <td className="py-4 px-2 text-right">
                             <div className="font-semibold text-[#4a85ff]">
@@ -218,9 +217,14 @@ export default function FundingParticipantsPage() {
                       className="bg-gradient-to-br from-white/5 to-white/[0.02] rounded-xl p-4 border border-white/10"
                     >
                       <div className="mb-3">
-                        <div className="font-mono text-white/90 text-sm">
+                        <a 
+                          href={`https://solscan.io/account/${entry.walletAddress}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-mono text-white/90 hover:text-white/70 transition-colors duration-300 text-sm"
+                        >
                           {formatWalletAddress(entry.walletAddress)}
-                        </div>
+                        </a>
                       </div>
                       <div className="grid grid-cols-2 gap-4 text-sm">
                         <div>
@@ -240,13 +244,12 @@ export default function FundingParticipantsPage() {
                   ))}
                 </div>
 
-                {participantsData.length > 50 && (
+                {participantsData.length > 100 && (
                   <div className="mt-6 text-center text-white/60 text-sm">
-                    Showing top 50 buyers out of {participantsData.length} total unique buyers
+                    Showing top 100 participants out of {participantsData.length} total unique buyers
                   </div>
                 )}
-              </div>
-            </Card>
+            </div>
           </div>
         </div>
       </main>
