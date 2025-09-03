@@ -4,6 +4,8 @@ export interface FundingParticipantEntry {
   percentageAllocation: number;
   totalPurchases: number;
   lastPurchaseSlot: number;
+  usdcAmount: number;
+  averagePrice: number;
 }
 
 export interface ApiFillData {
