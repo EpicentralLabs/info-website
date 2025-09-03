@@ -5,7 +5,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Card } from "@/components/ui/card";
 import { FundingParticipantEntry } from '@/types/fundingParticipants';
-import { fetchAllFundingRoundData } from '@/utils/api/useFetchFundingParticipantsData';
+import { fetchAllFundingRoundData, calculateTotalUsdcRaised } from '@/utils/api/useFetchFundingParticipantsData';
 
 export default function FundingParticipantsPage() {
   const [participantsData, setParticipantsData] = useState<FundingParticipantEntry[]>([]);
@@ -56,6 +56,18 @@ export default function FundingParticipantsPage() {
       style: 'percent'
     }).format(num / 100);
   };
+
+  const formatCurrency = (num: number) => {
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+    }).format(num);
+  };
+
+  // Calculate total USDC raised
+  const totalUsdcRaised = calculateTotalUsdcRaised(participantsData);
 
 
 
@@ -143,7 +155,7 @@ export default function FundingParticipantsPage() {
                         </div>
                         <div className="bg-gradient-to-br from-white/5 to-white/[0.02] rounded-xl p-4 border border-white/10 text-center min-w-[140px]">
                           <div className="text-lg md:text-xl font-bold text-[#4a85ff]">
-                            $10,000
+                            {formatCurrency(totalUsdcRaised)}
                           </div>
                           <div className="text-xs text-white/70">USDC Raised</div>
                         </div>

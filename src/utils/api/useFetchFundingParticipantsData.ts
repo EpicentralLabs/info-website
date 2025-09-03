@@ -34,6 +34,8 @@ export const processFundingParticipantsData = (fills: ApiFillData[]): FundingPar
     totalLabsQuantity: number;
     totalPurchases: number;
     lastPurchaseSlot: number;
+    totalUsdcSpent: number;
+    totalWeightedPrice: number;
   }>();
 
   // Filter and process only transactions where treasury wallet is the maker
@@ -53,17 +55,23 @@ export const processFundingParticipantsData = (fills: ApiFillData[]): FundingPar
       }
       
       const labsQuantity = parseInt(fill.baseAtoms) / 1e9; // Convert from atoms to tokens (assuming 9 decimals)
+      const usdcAmount = parseInt(fill.quoteAtoms) / 1e6; // Convert from atoms to USDC (6 decimals)
+      const pricePerToken = fill.priceAtoms; // Price is already in USDC per LABS token
       
       const existing = walletData.get(buyerWallet) || {
         totalLabsQuantity: 0,
         totalPurchases: 0,
-        lastPurchaseSlot: 0
+        lastPurchaseSlot: 0,
+        totalUsdcSpent: 0,
+        totalWeightedPrice: 0
       };
       
       walletData.set(buyerWallet, {
         totalLabsQuantity: existing.totalLabsQuantity + labsQuantity,
         totalPurchases: existing.totalPurchases + 1,
-        lastPurchaseSlot: Math.max(existing.lastPurchaseSlot, fill.slot)
+        lastPurchaseSlot: Math.max(existing.lastPurchaseSlot, fill.slot),
+        totalUsdcSpent: existing.totalUsdcSpent + usdcAmount,
+        totalWeightedPrice: existing.totalWeightedPrice + (pricePerToken * labsQuantity)
       });
     }
   });
@@ -71,6 +79,10 @@ export const processFundingParticipantsData = (fills: ApiFillData[]): FundingPar
   // Calculate total LABS tokens purchased from treasury
   const totalLabsTokens = Array.from(walletData.values())
     .reduce((sum, data) => sum + data.totalLabsQuantity, 0);
+
+  // Calculate total USDC raised
+  const totalUsdcRaised = Array.from(walletData.values())
+    .reduce((sum, data) => sum + data.totalUsdcSpent, 0);
 
   // Convert to funding participant entries with percentage calculations
   // Keep percentageAllocation as unrounded raw value
@@ -80,11 +92,20 @@ export const processFundingParticipantsData = (fills: ApiFillData[]): FundingPar
       labsQuantity: data.totalLabsQuantity,
       percentageAllocation: totalLabsTokens > 0 ? (data.totalLabsQuantity / totalLabsTokens) * 100 : 0,
       totalPurchases: data.totalPurchases,
-      lastPurchaseSlot: data.lastPurchaseSlot
+      lastPurchaseSlot: data.lastPurchaseSlot,
+      usdcAmount: data.totalUsdcSpent,
+      averagePrice: data.totalLabsQuantity > 0 ? data.totalWeightedPrice / data.totalLabsQuantity : 0
     }))
     .sort((a, b) => b.labsQuantity - a.labsQuantity); // Sort by quantity descending
 
   return participantEntries;
+};
+
+/**
+ * Calculate total USDC raised from participant entries
+ */
+export const calculateTotalUsdcRaised = (participants: FundingParticipantEntry[]): number => {
+  return participants.reduce((sum, participant) => sum + participant.usdcAmount, 0);
 };
 
 /**
