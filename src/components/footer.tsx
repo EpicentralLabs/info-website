@@ -96,7 +96,7 @@ export default function Footer() {
               className="text-white/70 hover:text-white transition-all duration-300 
                          hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]"
             >
-              Fundraiser Participants
+              Funding Campaign
             </Link>
             <Link 
               href="/roadmap"
