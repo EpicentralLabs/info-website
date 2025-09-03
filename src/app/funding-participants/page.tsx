@@ -99,7 +99,7 @@ export default function FundingParticipantsPage() {
           <div className="max-w-6xl mx-auto">
             {/* Header */}
             <div className="text-center mb-8 md:mb-16">
-              <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-tight mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-tight mb-8">
                 <span className="font-extralight drop-shadow-[0_0_0.3rem_#ffffff70] text-white">Fundraising Campaign</span>
                 <br className="sm:hidden" />
                 <span className="font-extralight drop-shadow-[0_0_0.3rem_#ffffff70] text-[#4a85ff] sm:ml-3">Participants</span>
@@ -107,39 +107,56 @@ export default function FundingParticipantsPage() {
               
               {/* Revenue Share & Stats Combined */}
               <div className="bg-black/30 backdrop-blur-md border border-white/10 rounded-xl p-4 md:p-8 max-w-6xl mx-auto mb-12 hover:border-white/20 transition-all duration-500 shadow-lg">
-                <div className="flex flex-col lg:flex-row lg:items-center gap-8">
-                  {/* Revenue Share Info - Left Side */}
-                  <div className="flex-1 text-center lg:text-left">
-                    <h3 className="text-xl md:text-2xl font-bold text-white mb-3">OPX Revenue Share Incentive:</h3>
-                    <p className="text-base md:text-lg text-white/80 mb-4">
-                      Fundraiser participants become eligible to receive <span className="text-[#4a85ff] font-bold text-lg md:text-lg">10%</span> of all <strong>OPX</strong> fees for 2 months post-launch*
-                    </p>
-                    <p className="text-xs text-white/60">
-                      * Must hold $LABS tokens until Sept 30, 2025 <br />
-                      * OPX launch date is TBD
-                    </p>
-                  </div>
-                  
-                  {/* Stats Grid - Right Side */}
-                  <div className="flex-shrink-0">
-                    <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3 gap-4 lg:gap-3">
-                      <div className="bg-gradient-to-br from-white/5 to-white/[0.02] rounded-xl p-4 border border-white/10 text-center min-w-[140px]">
-                        <div className="text-lg md:text-xl font-bold text-[#4a85ff]">
-                          {participantsData.length}
+                <div className="space-y-8">
+                  <div className="flex flex-col lg:flex-row lg:items-center gap-8">
+                    {/* Revenue Share Info - Left Side */}
+                    <div className="flex-1 text-center lg:text-left">
+                      <h3 className="text-xl md:text-2xl font-bold text-white mb-3">OPX Revenue Share Incentive:</h3>
+                      <p className="text-base md:text-lg text-white/80 mb-4">
+                        Fundraiser participants become eligible to receive <span className="text-[#4a85ff] font-bold text-lg md:text-lg">10%</span> of all <strong>OPX</strong> fees for 2 months post-launch*
+                      </p>
+                      <p className="text-xs text-white/60">
+                        * Must hold $LABS tokens until Sept 30, 2025 <br />
+                        * OPX launch date is TBD
+                      </p>
+                    </div>
+                    
+                    {/* Stats Grid - Right Side */}
+                    <div className="flex-shrink-0">
+                      <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3 gap-4 lg:gap-3">
+                        <div className="bg-gradient-to-br from-white/5 to-white/[0.02] rounded-xl p-4 border border-white/10 text-center min-w-[140px]">
+                          <div className="text-lg md:text-xl font-bold text-[#4a85ff]">
+                            {participantsData.length}
+                          </div>
+                          <div className="text-xs text-white/70">Unique Buyers</div>
                         </div>
-                        <div className="text-xs text-white/70">Unique Buyers</div>
+                        <div className="bg-gradient-to-br from-white/5 to-white/[0.02] rounded-xl p-4 border border-white/10 text-center min-w-[140px]">
+                          <div className="text-lg md:text-xl font-bold text-[#4a85ff]">
+                            {formatNumber(participantsData.reduce((sum, entry) => sum + entry.labsQuantity, 0))}
+                          </div>
+                          <div className="text-xs text-white/70">Total $LABS Bought</div>
+                        </div>
+                        <div className="bg-gradient-to-br from-white/5 to-white/[0.02] rounded-xl p-4 border border-white/10 text-center min-w-[140px]">
+                          <div className="text-lg md:text-xl font-bold text-[#4a85ff]">
+                            $10,000
+                          </div>
+                          <div className="text-xs text-white/70">USDC</div>
+                        </div>
                       </div>
-                      <div className="bg-gradient-to-br from-white/5 to-white/[0.02] rounded-xl p-4 border border-white/10 text-center min-w-[140px]">
-                        <div className="text-lg md:text-xl font-bold text-[#4a85ff]">
-                          {formatNumber(participantsData.reduce((sum, entry) => sum + entry.labsQuantity, 0))}
-                        </div>
-                        <div className="text-xs text-white/70">Total $LABS Bought</div>
-                      </div>
-                      <div className="bg-gradient-to-br from-white/5 to-white/[0.02] rounded-xl p-4 border border-white/10 text-center min-w-[140px]">
-                        <div className="text-lg md:text-xl font-bold text-[#4a85ff]">
-                          $10,000
-                        </div>
-                        <div className="text-xs text-white/70">USDC</div>
+                      
+                      {/* Join Fundraiser Button - Underneath stats */}
+                      <div className="text-center mt-6">
+                        <a
+                          href="https://cabana.exchange/token/LABSh5DTebUcUbEoLzXKCiXFJLecDFiDWiBGUU1GpxR/?partner=Epicentral"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 bg-[#FFFFFF] hover:bg-[#FFFFFF]/90 text-black font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:scale-95 shadow-lg hover:shadow-xl"
+                        >
+                          Join Fundraiser
+                          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                        </a>
                       </div>
                     </div>
                   </div>
