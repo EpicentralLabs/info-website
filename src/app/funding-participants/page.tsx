@@ -11,6 +11,11 @@ export default function FundingParticipantsPage() {
   const [participantsData, setParticipantsData] = useState<FundingParticipantEntry[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  
+  // Sort participants by contribution amount (descending) and slice to top 100
+  const sortedTopParticipants = participantsData
+    .sort((a, b) => b.labsQuantity - a.labsQuantity)
+    .slice(0, 100);
 
   useEffect(() => {
     const loadParticipantsData = async () => {
@@ -253,7 +258,7 @@ export default function FundingParticipantsPage() {
                       </tr>
                     </thead>
                     <tbody>
-                      {participantsData.slice(0, 100).map((entry) => (
+                      {sortedTopParticipants.map((entry) => (
                         <tr 
                           key={entry.walletAddress} 
                           className="border-b border-white/5 hover:bg-white/5 transition-colors"
@@ -294,7 +299,7 @@ export default function FundingParticipantsPage() {
 
                 {/* Mobile Cards */}
                 <div className="md:hidden space-y-3">
-                  {participantsData.slice(0, 50).map((entry) => (
+                  {sortedTopParticipants.map((entry) => (
                     <div 
                       key={entry.walletAddress}
                       className="bg-gradient-to-br from-white/5 to-white/[0.02] rounded-xl p-4 border border-white/10"

@@ -27,6 +27,7 @@ export const fetchFundingRoundData = async (limit = 1000, offset = 0): Promise<A
 /**
  * Process API data to create funding participant entries
  * Only count transactions where the treasury wallet is the maker (seller)
+ * Uses originalSigner for end-user attribution to avoid counting aggregators
  */
 export const processFundingParticipantsData = (fills: ApiFillData[]): FundingParticipantEntry[] => {
   const walletData = new Map<string, {
@@ -43,7 +44,14 @@ export const processFundingParticipantsData = (fills: ApiFillData[]): FundingPar
     // When treasury is maker and takerIsBuy = false, the taker is selling to treasury
     // We only want to count buyers (takerIsBuy = true)
     if (fill.takerIsBuy) {
-      const buyerWallet = fill.taker;
+      // Use originalSigner when available to attribute to end-user instead of aggregator
+      const buyerWallet = fill.originalSigner || fill.taker;
+      
+      // Skip treasury wallet to avoid self-attribution
+      if (buyerWallet === TREASURY_WALLET) {
+        return;
+      }
+      
       const labsQuantity = parseInt(fill.baseAtoms) / 1e9; // Convert from atoms to tokens (assuming 9 decimals)
       
       const existing = walletData.get(buyerWallet) || {
@@ -65,6 +73,7 @@ export const processFundingParticipantsData = (fills: ApiFillData[]): FundingPar
     .reduce((sum, data) => sum + data.totalLabsQuantity, 0);
 
   // Convert to funding participant entries with percentage calculations
+  // Keep percentageAllocation as unrounded raw value
   const participantEntries: FundingParticipantEntry[] = Array.from(walletData.entries())
     .map(([wallet, data]) => ({
       walletAddress: wallet,
