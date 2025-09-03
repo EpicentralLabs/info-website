@@ -119,7 +119,7 @@ export default function FundingParticipantsPage() {
               <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-tight mb-8">
                 <span className="font-extralight drop-shadow-[0_0_0.3rem_#ffffff70] text-white">Fundraising Campaign</span>
                 <br className="sm:hidden" />
-                <span className="font-extralight drop-shadow-[0_0_0.3rem_#ffffff70] text-[#4a85ff] sm:ml-3">Participants</span>
+
               </h1>
               
               {/* Revenue Share & Stats Combined */}
@@ -215,7 +215,7 @@ export default function FundingParticipantsPage() {
                             href="https://cabana.exchange/token/LABSh5DTebUcUbEoLzXKCiXFJLecDFiDWiBGUU1GpxR/?partner=Epicentral"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center gap-1 sm:gap-2 bg-[#FFFFFF] hover:bg-[#FFFFFF]/90 text-black font-semibold px-2 py-1 sm:px-4 sm:py-1.5 rounded-lg transition-all duration-300 hover:scale-95 shadow-lg hover:shadow-xl text-xs sm:text-sm w-[140px] sm:w-[160px]"
+                            className="inline-flex items-center justify-center gap-1 sm:gap-2 bg-[#FFFFFF]/70 hover:bg-[#FFFFFF]/90 text-black font-semibold px-2 py-1 sm:px-4 sm:py-1.5 rounded-lg transition-all duration-300 hover:scale-95 shadow-lg hover:shadow-xl text-xs sm:text-sm w-[140px] sm:w-[160px]"
                           >
                             Join Fundraiser
                             <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -226,7 +226,7 @@ export default function FundingParticipantsPage() {
                             href="https://v2.realms.today/dao/5PP7vKjJyLw1MR55LoexRsCj3CpZj9MdD6aNXRrvxG42/proposal/HRCn9Ti4GzEiA2i7rRV74osCxwxPK9i5pDVzfy8phSgT"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center gap-1 sm:gap-2 bg-transparent hover:bg-white/5 text-white border border-white/20 hover:border-white/40 font-medium px-2 py-1 sm:px-4 sm:py-1.5 rounded-lg transition-all duration-300 text-xs sm:text-sm w-[140px] sm:w-[160px]"
+                            className="inline-flex items-center justify-center gap-1 sm:gap-2 bg-transparent hover:bg-white/5 text-white/70 border border-white/20 hover:border-white/40 font-medium px-2 py-1 sm:px-4 sm:py-1.5 rounded-lg transition-all duration-300 text-xs sm:text-sm w-[140px] sm:w-[160px]"
                           >
                             Learn More
                           </a>
