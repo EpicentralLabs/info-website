@@ -154,7 +154,7 @@ export default function FundingParticipantsPage() {
                           <div className="text-xs text-white/70">Total $LABS Purchased</div>
                         </div>
                         <div className="bg-gradient-to-br from-white/5 to-white/[0.02] rounded-xl p-4 border border-white/10 text-center min-w-[140px]">
-                          <div className="text-lg md:text-xl font-bold text-[#4a85ff]">
+                          <div className="text-lg md:text-xl font-bold text-[#4a85ff] drop-shadow-[0_0_16px_#4a85ffcc] animate-pulse">
                             {formatCurrency(totalUsdcRaised)}
                           </div>
                           <div className="text-xs text-white/70">USDC Raised</div>
