@@ -106,7 +106,7 @@ export default function FundingParticipantsPage() {
               </h1>
               
               {/* Revenue Share & Stats Combined */}
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 md:p-8 max-w-6xl mx-auto mb-12">
+              <div className="bg-black/30 backdrop-blur-md border border-white/10 rounded-xl p-4 md:p-8 max-w-6xl mx-auto mb-12 hover:border-white/20 transition-all duration-500 shadow-lg">
                 <div className="flex flex-col lg:flex-row lg:items-center gap-8">
                   {/* Revenue Share Info - Left Side */}
                   <div className="flex-1 text-center lg:text-left">
@@ -155,9 +155,8 @@ export default function FundingParticipantsPage() {
             </div>
 
             {/* Leaderboard Table */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 md:p-6 lg:p-8 
-                            hover:border-white/20 transition-all duration-500
-                            shadow-[0_0_15px_rgba(0,0,0,0.2)]">
+            <div className="bg-black/30 backdrop-blur-md border border-white/10 rounded-xl p-4 md:p-6 lg:p-8 
+                            hover:border-white/20 transition-all duration-500 shadow-lg">
               <h2 className="text-xl md:text-2xl lg:text-3xl font-light text-white/90 mb-2 md:mb-6 drop-shadow-[0_0_0.3rem_#ffffff70]
                              text-center">
                 Top 100 Participants
