@@ -110,9 +110,9 @@ export default function FundingParticipantsPage() {
                 <div className="flex flex-col lg:flex-row lg:items-center gap-8">
                   {/* Revenue Share Info - Left Side */}
                   <div className="flex-1 text-center lg:text-left">
-                    <h3 className="text-xl md:text-2xl font-bold text-white mb-3">OPX Revenue Share Incentive</h3>
+                    <h3 className="text-xl md:text-2xl font-bold text-white mb-3">OPX Revenue Share Incentive:</h3>
                     <p className="text-base md:text-lg text-white/80 mb-4">
-                      Earn <span className="text-[#4a85ff] font-bold text-lg md:text-lg">10%</span> of all OPX fees for 2 months post-launch*
+                      Fundraiser participants become eligible to receive <span className="text-[#4a85ff] font-bold text-lg md:text-lg">10%</span> of all <strong>OPX</strong> fees for 2 months post-launch*
                     </p>
                     <p className="text-xs text-white/60">
                       * Must hold $LABS tokens until Sept 30, 2025 <br />
