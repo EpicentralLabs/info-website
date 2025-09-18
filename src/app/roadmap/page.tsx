@@ -80,11 +80,6 @@ export default function RoadmapPage() {
                 },
                 {
                   type: ItemType.Community,
-                  text: "Epicentral Twitter Account reaches 1000 followers",
-                  status: StatusChoice.InProgress,
-                },
-                {
-                  type: ItemType.Community,
                   text: "Realms Ecosystem DAO grants $10,000 to EpicentralDAO for LP Plugin Integration",
                   status: StatusChoice.Completed,
                 },
@@ -189,7 +184,7 @@ export default function RoadmapPage() {
                 },
                 {
                   type: ItemType.Technical,
-                  text: "Execute Phase 1 agreement with Hello Moon to create bid-side options_program for OPX",
+                  text: "Execute agreement with Hello Moon to create bid-side options_program for OPX",
                   status: StatusChoice.Completed,
                 },
                 {
@@ -219,7 +214,7 @@ export default function RoadmapPage() {
               quarter="Q3 2025"
               title="OPX - Solana's Official Options Exchange"
               status={StatusChoice.InProgress}
-              description="Creation and launch of OPX, Solana's first official options exchange"
+              description="Creation and launch of Paper Trading for OPX, Solana's first official options exchange"
               items={[
                 {
                   type: ItemType.Community,
@@ -233,7 +228,7 @@ export default function RoadmapPage() {
                 },
                 {
                   type: ItemType.Community,
-                  text: "Host a Competition for OPX",
+                  text: "Host a Competition for Paper Trading",
                   status: StatusChoice.Todo,
                 },
                 {
@@ -248,12 +243,12 @@ export default function RoadmapPage() {
                 },
                 {
                   type: ItemType.Community,
-                  text: "Create Trade Leaderboard for OPX",
+                  text: "Create Trade Leaderboard for Paper Trading",
                   status: StatusChoice.Todo,
                 },
                 {
                   type: ItemType.Community,
-                  text: "Initialize a Bug Bounty Program for OPX",
+                  text: "Initialize a Bug Bounty Program for Paper Trading",
                   status: StatusChoice.Todo,
                 },
                 {
@@ -262,19 +257,14 @@ export default function RoadmapPage() {
                   status: StatusChoice.InProgress,
                 },
                 {
-                  type: ItemType.Technical,
-                  text: "Execute Phase 2 agreement with Hello Moon to create ask-side options_program for OPX",
+                  type: ItemType.Community,
+                  text: "Epicentral Twitter Account reaches 1,000 followers",
                   status: StatusChoice.Completed,
                 },
                 {
                   type: ItemType.Technical,
-                  text: "OPX - Release for Beta",
-                  status: StatusChoice.Todo,
-                },
-                {
-                  type: ItemType.Technical,
-                  text: "OMLP Program(s)",
-                  status: StatusChoice.InProgress,
+                  text: "Execute agreement with Hello Moon to create ask-side options_program for OPX",
+                  status: StatusChoice.Completed,
                 },
                 {
                   type: ItemType.Technical,
@@ -283,7 +273,7 @@ export default function RoadmapPage() {
                 },
                 {
                   type: ItemType.Technical,
-                  text: "Create DOCS page",
+                  text: "Publish DOCS page",
                   status: StatusChoice.InProgress,
                 },
                 {
@@ -298,53 +288,23 @@ export default function RoadmapPage() {
                 },
                 {
                   type: ItemType.Technical,
-                  text: "OPX - Devnet Deployment",
+                  text: "Paper Trading - Devnet Deployment",
                   status: StatusChoice.InProgress,
                 },
                 {
                   type: ItemType.Technical,
-                  text: "OPX - Mainnet Deployment",
+                  text: "Paper Trading - Mainnet Deployment",
                   status: StatusChoice.Todo,
                 },
                 {
                   type: ItemType.Technical,
-                  text: "Implement Programmable Fee Model via DAO proposals",
+                  text: "Create OPX fee model and embed it into the smart contract",
                   status: StatusChoice.Completed,
                 },
                 {
                   type: ItemType.Technical,
                   text: "OPX - Option Margin Liquidity Pool (OMLP)",
                   status: StatusChoice.InProgress,
-                },
-                {
-                  type: ItemType.Technical,
-                  text: "Integrate Options into other DeFi Protocols (DeFiTuna, Adrena, etc.)",
-                  status: StatusChoice.Todo,
-                },
-                {
-                  type: ItemType.Technical,
-                  text: "SOS SDK - Utilizing Option Pricing Model (OPM)",
-                  status: StatusChoice.Completed,
-                },
-                {
-                  type: ItemType.Technical,
-                  text: "SOS SDK - Option Program CPI",
-                  status: StatusChoice.Todo,
-                },
-                {
-                  type: ItemType.Technical,
-                  text: "SOS SDK - Option Margin Liquidity Pool (OMLP)",
-                  status: StatusChoice.Todo,
-                },
-                {
-                  type: ItemType.Technical,
-                  text: "SOS SDK - Option Pricing Model (OPM)",
-                  status: StatusChoice.Todo,
-                },
-                {
-                  type: ItemType.Technical,
-                  text: "SOS SDK - Option Programs",
-                  status: StatusChoice.Todo,
                 },
               ]}
             />
@@ -375,6 +335,41 @@ export default function RoadmapPage() {
                 type: ItemType.Technical,
                 text: "Integrate Options into more DeFi Protocols",
                 status: StatusChoice.Todo,
+                },
+                {
+                  type: ItemType.Technical,
+                  text: "SOS SDK - Utilizing Option Pricing Model (OPM)",
+                  status: StatusChoice.Completed,
+                },
+                {
+                  type: ItemType.Technical,
+                  text: "SOS SDK - Option Program CPI",
+                  status: StatusChoice.Todo,
+                },
+                {
+                  type: ItemType.Technical,
+                  text: "SOS SDK - Option Margin Liquidity Pool (OMLP)",
+                  status: StatusChoice.Todo,
+                },
+                {
+                  type: ItemType.Technical,
+                  text: "SOS SDK - Option Pricing Model (OPM)",
+                  status: StatusChoice.Todo,
+                },
+                {
+                  type: ItemType.Technical,
+                  text: "SOS SDK - Option Programs",
+                  status: StatusChoice.Todo,
+                },
+                {
+                  type: ItemType.Technical,
+                  text: "OPX - Release for Beta",
+                  status: StatusChoice.Todo,
+                },
+                {
+                  type: ItemType.Technical,
+                  text: "Integrate Options into other DeFi Protocols (DeFiTuna, Adrena, etc.)",
+                  status: StatusChoice.Todo,
                 },
               ]}
               />
