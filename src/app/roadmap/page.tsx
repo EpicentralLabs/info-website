@@ -189,7 +189,7 @@ export default function RoadmapPage() {
                 },
                 {
                   type: ItemType.Technical,
-                  text: "Execute agreement with Hello Moon to create options_program for OPX",
+                  text: "Execute Phase 1 agreement with Hello Moon to create bid-side options_program for OPX",
                   status: StatusChoice.Completed,
                 },
                 {
@@ -204,7 +204,7 @@ export default function RoadmapPage() {
                 },
                 {
                   type: ItemType.Community,
-                  text: " Set up Epicentral Labs, DAO LLC",
+                  text: " Set up Epicentral Labs, DAO LLC as a legal entity",
                   status: StatusChoice.Completed,
                 },
                 {
@@ -223,7 +223,12 @@ export default function RoadmapPage() {
               items={[
                 {
                   type: ItemType.Community,
-                  text: "Launch & Execute $20,000 fundraiser for EpicentralDAO",
+                  text: "Solana's first non-OTC open-market fundraiser to raise $20,000",
+                  status: StatusChoice.Completed,
+                },
+                {
+                  type: ItemType.Community,
+                  text: "Get reposted by Solana on X/Twitter to be seen by 73,900+ views",
                   status: StatusChoice.Completed,
                 },
                 {
@@ -233,7 +238,12 @@ export default function RoadmapPage() {
                 },
                 {
                   type: ItemType.Community,
-                  text: "Create X/Twitter Collaboration Campaign with Pyth Network, and Cabana Exchange",
+                  text: "Announce Pyth Network Collaboration publicly on X/Twitter",
+                  status: StatusChoice.Completed,
+                },
+                {
+                  type: ItemType.Community,
+                  text: "Announce Cabana Exchange Collaboration publicly on X/Twitter",
                   status: StatusChoice.Completed,
                 },
                 {
@@ -244,12 +254,17 @@ export default function RoadmapPage() {
                 {
                   type: ItemType.Community,
                   text: "Initialize a Bug Bounty Program for OPX",
-                  status: StatusChoice.InProgress,
+                  status: StatusChoice.Todo,
                 },
                 {
                   type: ItemType.Community,
                   text: "Host 3 AMA Calls on X/Twitter (2)",
                   status: StatusChoice.InProgress,
+                },
+                {
+                  type: ItemType.Technical,
+                  text: "Execute Phase 2 agreement with Hello Moon to create ask-side options_program for OPX",
+                  status: StatusChoice.Completed,
                 },
                 {
                   type: ItemType.Technical,
@@ -259,7 +274,7 @@ export default function RoadmapPage() {
                 {
                   type: ItemType.Technical,
                   text: "OMLP Program(s)",
-                  status: StatusChoice.Todo,
+                  status: StatusChoice.InProgress,
                 },
                 {
                   type: ItemType.Technical,
@@ -274,12 +289,12 @@ export default function RoadmapPage() {
                 {
                   type: ItemType.Technical,
                   text: "Option Programs - Create Option",
-                  status: StatusChoice.InProgress,
+                  status: StatusChoice.Completed,
                 },
                 {
                   type: ItemType.Technical,
                   text: "Option Programs - Validate Option",
-                  status: StatusChoice.InProgress,
+                  status: StatusChoice.Completed,
                 },
                 {
                   type: ItemType.Technical,
@@ -294,12 +309,12 @@ export default function RoadmapPage() {
                 {
                   type: ItemType.Technical,
                   text: "Implement Programmable Fee Model via DAO proposals",
-                  status: StatusChoice.Todo,
+                  status: StatusChoice.Completed,
                 },
                 {
                   type: ItemType.Technical,
                   text: "OPX - Option Margin Liquidity Pool (OMLP)",
-                  status: StatusChoice.Todo,
+                  status: StatusChoice.InProgress,
                 },
                 {
                   type: ItemType.Technical,
@@ -309,7 +324,7 @@ export default function RoadmapPage() {
                 {
                   type: ItemType.Technical,
                   text: "SOS SDK - Utilizing Option Pricing Model (OPM)",
-                  status: StatusChoice.Todo,
+                  status: StatusChoice.Completed,
                 },
                 {
                   type: ItemType.Technical,
