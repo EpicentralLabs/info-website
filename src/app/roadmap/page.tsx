@@ -222,6 +222,41 @@ export default function RoadmapPage() {
               description="Creation and launch of OPX, Solana's first official options exchange"
               items={[
                 {
+                  type: ItemType.Community,
+                  text: "Launch & Execute $20,000 fundraiser for EpicentralDAO",
+                  status: StatusChoice.Completed,
+                },
+                {
+                  type: ItemType.Community,
+                  text: "Host a Competition for OPX",
+                  status: StatusChoice.Todo,
+                },
+                {
+                  type: ItemType.Community,
+                  text: "Create X/Twitter Collaboration Campaign with Pyth Network, and Cabana Exchange",
+                  status: StatusChoice.Completed,
+                },
+                {
+                  type: ItemType.Community,
+                  text: "Create Trade Leaderboard for OPX",
+                  status: StatusChoice.Todo,
+                },
+                {
+                  type: ItemType.Community,
+                  text: "Initialize a Bug Bounty Program for OPX",
+                  status: StatusChoice.InProgress,
+                },
+                {
+                  type: ItemType.Community,
+                  text: "Host 3 AMA Calls on X/Twitter (2)",
+                  status: StatusChoice.InProgress,
+                },
+                {
+                  type: ItemType.Technical,
+                  text: "OPX - Release for Beta",
+                  status: StatusChoice.Todo,
+                },
+                {
                   type: ItemType.Technical,
                   text: "OMLP Program(s)",
                   status: StatusChoice.Todo,
@@ -247,11 +282,6 @@ export default function RoadmapPage() {
                   status: StatusChoice.InProgress,
                 },
                 {
-                  type: ItemType.Community,
-                  text: "Initialize a Bug Bounty Program for OPX",
-                  status: StatusChoice.InProgress,
-                },
-                {
                   type: ItemType.Technical,
                   text: "OPX - Devnet Deployment",
                   status: StatusChoice.InProgress,
@@ -259,21 +289,6 @@ export default function RoadmapPage() {
                 {
                   type: ItemType.Technical,
                   text: "OPX - Mainnet Deployment",
-                  status: StatusChoice.Todo,
-                },
-                {
-                  type: ItemType.Community,
-                  text: "Host a Competition for OPX",
-                  status: StatusChoice.Todo,
-                },
-                {
-                  type: ItemType.Technical,
-                  text: "OPX - Release for Beta",
-                  status: StatusChoice.Todo,
-                },
-                {
-                  type: ItemType.Community,
-                  text: "Create X/Twitter Marketing Campaign",
                   status: StatusChoice.Todo,
                 },
                 {
@@ -289,11 +304,6 @@ export default function RoadmapPage() {
                 {
                   type: ItemType.Technical,
                   text: "Integrate Options into other DeFi Protocols (DeFiTuna, Adrena, etc.)",
-                  status: StatusChoice.Todo,
-                },
-                {
-                  type: ItemType.Community,
-                  text: "Create Trade Leaderboard for OPX",
                   status: StatusChoice.Todo,
                 },
                 {
