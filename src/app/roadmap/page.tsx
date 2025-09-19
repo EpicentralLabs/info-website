@@ -184,7 +184,7 @@ export default function RoadmapPage() {
                 },
                 {
                   type: ItemType.Technical,
-                  text: "Execute agreement with Hello Moon to create bid-side options_program for OPX",
+                  text: "Begin Hello Moon partnership",
                   status: StatusChoice.Completed,
                 },
                 {
@@ -218,7 +218,7 @@ export default function RoadmapPage() {
               items={[
                 {
                   type: ItemType.Community,
-                  text: "Complete Solana's first non-OTC open-market fundraiser to raise $20,000",
+                  text: "Complete Solana's first open-market fundraiser to raise $20,000",
                   status: StatusChoice.Completed,
                 },
                 {
@@ -228,7 +228,7 @@ export default function RoadmapPage() {
                 },
                 {
                   type: ItemType.Community,
-                  text: "Announce Pyth Network collaboration publicly on X/Twitter",
+                  text: "Announce Pyth Network collaboration",
                   status: StatusChoice.Completed,
                 },
                 {
