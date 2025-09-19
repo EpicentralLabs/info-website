@@ -228,42 +228,42 @@ export default function RoadmapPage() {
                 },
                 {
                   type: ItemType.Community,
-                  text: "Host a Competition for Paper Trading",
+                  text: "Host a competition for OPX paper trading",
                   status: StatusChoice.Todo,
                 },
                 {
                   type: ItemType.Community,
-                  text: "Announce Pyth Network Collaboration publicly on X/Twitter",
+                  text: "Announce Pyth Network collaboration publicly on X/Twitter",
                   status: StatusChoice.Completed,
                 },
                 {
                   type: ItemType.Community,
-                  text: "Announce Cabana Exchange Collaboration publicly on X/Twitter",
+                  text: "Announce Cabana Exchange collaboration publicly on X/Twitter",
                   status: StatusChoice.Completed,
                 },
                 {
                   type: ItemType.Community,
-                  text: "Create Trade Leaderboard for Paper Trading",
+                  text: "Create trade leaderboard for OPX paper trading competition",
                   status: StatusChoice.Todo,
                 },
                 {
                   type: ItemType.Community,
-                  text: "Initialize a Bug Bounty Program for Paper Trading",
+                  text: "Initialize a bug bounty program for OPX paper trading",
                   status: StatusChoice.Todo,
                 },
                 {
                   type: ItemType.Community,
-                  text: "Host 3 AMA Calls on X/Twitter (2)",
+                  text: "Host 3 AMA calls on X/Twitter (2)",
                   status: StatusChoice.InProgress,
                 },
                 {
                   type: ItemType.Community,
-                  text: "Epicentral Twitter Account reaches 1,000 followers",
+                  text: "Epicentral X/Twitter account reaches 1,000 followers",
                   status: StatusChoice.Completed,
                 },
                 {
                   type: ItemType.Community,
-                  text: "Epicentral Records its 100th proposal on-chain via Realms",
+                  text: "Epicentral DAO records its 100th proposal on-chain via Realms",
                   status: StatusChoice.Completed,
                 },
                 {
@@ -280,6 +280,11 @@ export default function RoadmapPage() {
                   type: ItemType.Technical,
                   text: "Publish DOCS page",
                   status: StatusChoice.InProgress,
+                },
+                {
+                  type: ItemType.Technical,
+                  text: "Publish fundraiser page",
+                  status: StatusChoice.Completed,
                 },
                 {
                   type: ItemType.Technical,
