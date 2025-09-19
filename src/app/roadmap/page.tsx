@@ -262,13 +262,18 @@ export default function RoadmapPage() {
                   status: StatusChoice.Completed,
                 },
                 {
+                  type: ItemType.Community,
+                  text: "Epicentral Records its 100th proposal on-chain via Realms",
+                  status: StatusChoice.Completed,
+                },
+                {
                   type: ItemType.Technical,
                   text: "Execute agreement with Hello Moon to create ask-side options_program for OPX",
                   status: StatusChoice.Completed,
                 },
                 {
                   type: ItemType.Technical,
-                  text: "Create Revshare Staking Program",
+                  text: "Deploy Revshare Staking Program",
                   status: StatusChoice.InProgress,
                 },
                 {
