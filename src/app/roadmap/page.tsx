@@ -218,7 +218,7 @@ export default function RoadmapPage() {
               items={[
                 {
                   type: ItemType.Community,
-                  text: "Solana's first non-OTC open-market fundraiser to raise $20,000",
+                  text: "Complete Solana's first non-OTC open-market fundraiser to raise $20,000",
                   status: StatusChoice.Completed,
                 },
                 {
