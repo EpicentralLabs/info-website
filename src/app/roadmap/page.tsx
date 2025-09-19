@@ -298,12 +298,12 @@ export default function RoadmapPage() {
                 },
                 {
                   type: ItemType.Technical,
-                  text: "Paper Trading - Devnet Deployment",
+                  text: "OPX Paper Trading - Devnet Deployment",
                   status: StatusChoice.InProgress,
                 },
                 {
                   type: ItemType.Technical,
-                  text: "Paper Trading - Mainnet Deployment",
+                  text: "OPX Paper Trading - Mainnet Deployment",
                   status: StatusChoice.Todo,
                 },
                 {
