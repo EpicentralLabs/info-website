@@ -228,23 +228,13 @@ export default function RoadmapPage() {
                 },
                 {
                   type: ItemType.Community,
-                  text: "Host a competition for OPX paper trading",
-                  status: StatusChoice.Todo,
-                },
-                {
-                  type: ItemType.Community,
                   text: "Announce Pyth Network collaboration publicly on X/Twitter",
                   status: StatusChoice.Completed,
                 },
                 {
                   type: ItemType.Community,
-                  text: "Announce Cabana Exchange collaboration publicly on X/Twitter",
+                  text: "Announce Cabana Exchange collaboration",
                   status: StatusChoice.Completed,
-                },
-                {
-                  type: ItemType.Community,
-                  text: "Create trade leaderboard for OPX paper trading competition",
-                  status: StatusChoice.Todo,
                 },
                 {
                   type: ItemType.Community,
@@ -268,7 +258,7 @@ export default function RoadmapPage() {
                 },
                 {
                   type: ItemType.Technical,
-                  text: "Execute agreement with Hello Moon to create ask-side options_program for OPX",
+                  text: "Hello Moon partnership proposal - MVP Delivery",
                   status: StatusChoice.Completed,
                 },
                 {
@@ -278,37 +268,27 @@ export default function RoadmapPage() {
                 },
                 {
                   type: ItemType.Technical,
-                  text: "Publish DOCS page",
+                  text: "Publish documentation page",
+                  status: StatusChoice.InProgress,
+                },
+                {
+                  type: ItemType.Community,
+                  text: "Launch open-market fundraising Campaign",
+                  status: StatusChoice.Completed,
+                },
+                {
+                  type: ItemType.Technical,
+                  text: "Create Solana Option Program",
+                  status: StatusChoice.Completed,
+                },
+                {
+                  type: ItemType.Technical,
+                  text: "OPX Paper Trading",
                   status: StatusChoice.InProgress,
                 },
                 {
                   type: ItemType.Technical,
-                  text: "Publish fundraiser page",
-                  status: StatusChoice.Completed,
-                },
-                {
-                  type: ItemType.Technical,
-                  text: "Option Programs - Create Option",
-                  status: StatusChoice.Completed,
-                },
-                {
-                  type: ItemType.Technical,
-                  text: "Option Programs - Validate Option",
-                  status: StatusChoice.Completed,
-                },
-                {
-                  type: ItemType.Technical,
-                  text: "OPX Paper Trading - Devnet Deployment",
-                  status: StatusChoice.InProgress,
-                },
-                {
-                  type: ItemType.Technical,
-                  text: "OPX Paper Trading - Mainnet Deployment",
-                  status: StatusChoice.Todo,
-                },
-                {
-                  type: ItemType.Technical,
-                  text: "Create OPX fee model and embed it into the smart contract",
+                  text: "Create OPX fee model",
                   status: StatusChoice.Completed,
                 },
                 {
@@ -379,6 +359,16 @@ export default function RoadmapPage() {
                 {
                   type: ItemType.Technical,
                   text: "Integrate Options into other DeFi Protocols (DeFiTuna, Adrena, etc.)",
+                  status: StatusChoice.Todo,
+                },
+                {
+                  type: ItemType.Community,
+                  text: "Create trade leaderboard for OPX paper trading competition",
+                  status: StatusChoice.Todo,
+                },
+                {
+                  type: ItemType.Community,
+                  text: "Host a competition for OPX paper trading",
                   status: StatusChoice.Todo,
                 },
               ]}
