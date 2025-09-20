@@ -158,9 +158,9 @@ export default function RoadmapPage() {
 
             <RoadmapCard
               quarter="Q2 2025"
-              title="Collaboration and Offialization"
+              title="Collaboration and Officialization"
               status={StatusChoice.InProgress}
-              description="Establishing Epicentral Labs as a legal entity, and building partnerships with key Solana partners "
+              description="Establish Epicentral Labs as a legal entity, and building partnerships with key Solana partners "
               items={[
                 {
                   type: ItemType.Community,
@@ -214,7 +214,7 @@ export default function RoadmapPage() {
               quarter="Q3 2025"
               title="OPX - Solana's Official Options Exchange"
               status={StatusChoice.InProgress}
-              description="Creation and launch of Paper Trading for OPX, Solana's first official options exchange"
+              description="Front-end finalization, Back-end Collaboration, and Fundraising for OPX - Solana's first official options exchange"
               items={[
                 {
                   type: ItemType.Community,
