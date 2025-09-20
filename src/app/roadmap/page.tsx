@@ -243,6 +243,11 @@ export default function RoadmapPage() {
                 },
                 {
                   type: ItemType.Community,
+                  text: "Introduced $LABS price bot in Epicentral Discord",
+                  status: StatusChoice.Completed,
+                },
+                {
+                  type: ItemType.Community,
                   text: "Host 3 AMA calls on X/Twitter (2)",
                   status: StatusChoice.InProgress,
                 },
