@@ -203,6 +203,11 @@ export default function RoadmapPage() {
                   status: StatusChoice.Completed,
                 },
                 {
+                  type: ItemType.Technical,
+                  text: "Collaborated with TritonOne to utilize their RPCs for Development",
+                  status: StatusChoice.Completed,
+                },
+                {
                   type: ItemType.Community,
                   text: "Host 3 AMA Calls on X/Twitter (1)",
                   status: StatusChoice.Cancelled,
