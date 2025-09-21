@@ -159,7 +159,7 @@ export default function RoadmapPage() {
             <RoadmapCard
               quarter="Q2 2025"
               title="Collaboration and Officialization"
-              status={StatusChoice.InProgress}
+              status={StatusChoice.Completed}
               description="Establish Epicentral Labs as a legal entity, and building partnerships with key Solana partners "
               items={[
                 {
