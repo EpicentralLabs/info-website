@@ -86,6 +86,21 @@ export default function Navbar() {
               Roadmap
             </Link>
 
+            {/* Vertical Gradient Divider */}
+            <div className="relative h-3 w-px">
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/20 to-transparent blur-[2px]"></div>
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/40 to-transparent"></div>
+              <div className="h-full w-px bg-gradient-to-b from-transparent via-white/20 to-transparent relative"></div>
+            </div>
+
+            {/* Add Funding Participants Link */}
+            <Link 
+              href="/funding-participants"
+              className="text-sm font-medium text-[#4a85ff] opacity-80 hover:opacity-100 transition-all drop-shadow-[0_0_0.3rem_#4a85ff] hover:drop-shadow-[0_0_0.5rem_#4a85ff] duration-300"
+            >
+              Funding Campaign
+            </Link>
+
             {/* Social Icons */}
             <div className="flex items-center space-x-6">
               <Link 
@@ -238,6 +253,22 @@ export default function Navbar() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Roadmap
+              </Link>
+
+              {/* Gradient Divider */}
+              <div className="relative w-full">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent blur-sm"></div>
+                <div className="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent relative"></div>
+              </div>
+
+              {/* Add Funding Participants Link in mobile menu */}
+              <Link 
+                href="/funding-participants"
+                className="block text-base font-medium text-[#4a85ff] opacity-80 hover:opacity-100 transition-all 
+                           drop-shadow-[0_0_0.3rem_#4a85ff] hover:drop-shadow-[0_0_0.5rem_#4a85ff] duration-300"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Funding Campaign
               </Link>
 
               {/* Social Icons in Mobile Menu */}
