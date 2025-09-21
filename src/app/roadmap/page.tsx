@@ -80,22 +80,12 @@ export default function RoadmapPage() {
                 },
                 {
                   type: ItemType.Community,
-                  text: "Epicentral Twitter Account reaches 1000 followers",
-                  status: StatusChoice.InProgress,
-                },
-                {
-                  type: ItemType.Community,
                   text: "Realms Ecosystem DAO grants $10,000 to EpicentralDAO for LP Plugin Integration",
                   status: StatusChoice.Completed,
                 },
                 {
                   type: ItemType.Community,
                   text: "Epicentral Labs Whitepaper Debuted",
-                  status: StatusChoice.Completed,
-                },
-                {
-                  type: ItemType.Community,
-                  text: "Collaborated with another Solana Project",
                   status: StatusChoice.Completed,
                 },
                 {
@@ -168,35 +158,10 @@ export default function RoadmapPage() {
 
             <RoadmapCard
               quarter="Q2 2025"
-              title="OPX - Solana's Official Options Exchange"
-              status={StatusChoice.InProgress}
-              description="Continue building and testing the core protocol: OPX."
+              title="Collaboration and Officialization"
+              status={StatusChoice.Completed}
+              description="Establish Epicentral Labs as a legal entity, and building partnerships with key Solana partners "
               items={[
-                {
-                  type: ItemType.Technical,
-                  text: "Option Programs - Validate Option",
-                  status: StatusChoice.InProgress,
-                },
-                {
-                  type: ItemType.Technical,
-                  text: "OMLP Program(s)",
-                  status: StatusChoice.InProgress,
-                },
-                {
-                  type: ItemType.Technical,
-                  text: "Option Programs - Exercise Option",
-                  status: StatusChoice.InProgress,
-                },
-                {
-                  type: ItemType.Technical,
-                  text: "Option Programs - Create Option",
-                  status: StatusChoice.InProgress,
-                },
-                {
-                  type: ItemType.Technical,
-                  text: "OPX - Option Margin Liquidity Pool (OMLP)",
-                  status: StatusChoice.InProgress,
-                },
                 {
                   type: ItemType.Community,
                   text: "Hire intern to run X/Twitter & Social Media",
@@ -209,32 +174,191 @@ export default function RoadmapPage() {
                 },
                 {
                   type: ItemType.Community,
-                  text: "Initialize a Bug Bounty Program for OPX",
-                  status: StatusChoice.Todo,
+                  text: "Receive a second round of grants greater than $10k",
+                  status: StatusChoice.Cancelled,
                 },
                 {
                   type: ItemType.Community,
-                  text: "Recieve a second round of grants greater than $10k",
-                  status: StatusChoice.InProgress,
+                  text: "Implement discord price bot",
+                  status: StatusChoice.Completed,
                 },
                 {
-                  type: ItemType.Community,
-                  text: "Submit to the Solana Breakpoint 2025 Hackathon",
+                  type: ItemType.Technical,
+                  text: "Begin Hello Moon partnership",
                   status: StatusChoice.Completed,
                 },
                 {
                   type: ItemType.Community,
-                  text: "Host 3 AMA Calls on X/Twitter",
-                  status: StatusChoice.InProgress,
+                  text: "Submit pitch to the Solana Breakpoint 2025 Hackathon",
+                  status: StatusChoice.Completed,
+                },
+                {
+                  type: ItemType.Technical,
+                  text: "Secure OPX.MARKETS as OPX protocol domain",
+                  status: StatusChoice.Completed,
                 },
                 {
                   type: ItemType.Community,
-                  text: "Determine OPX Protocol Fees",
+                  text: " Set up Epicentral Labs, DAO LLC as a legal entity",
+                  status: StatusChoice.Completed,
+                },
+                {
+                  type: ItemType.Technical,
+                  text: "Collaborated with TritonOne to utilize their RPCs for Development",
+                  status: StatusChoice.Completed,
+                },
+                {
+                  type: ItemType.Community,
+                  text: "Host 3 AMA Calls on X/Twitter (1)",
+                  status: StatusChoice.Cancelled,
+                },
+              ]}
+            />
+
+            <RoadmapCard
+              quarter="Q3 2025"
+              title="OPX - Solana's Official Options Exchange"
+              status={StatusChoice.InProgress}
+              description="Front-end finalization, Back-end Collaboration, and Fundraising for OPX - Solana's first official options exchange"
+              items={[
+                {
+                  type: ItemType.Community,
+                  text: "Complete Solana's first open-market fundraiser to raise $20,000",
+                  status: StatusChoice.Completed,
+                },
+                {
+                  type: ItemType.Community,
+                  text: "Get reposted by Solana on X/Twitter to be seen by 73,900+ views",
+                  status: StatusChoice.Completed,
+                },
+                {
+                  type: ItemType.Community,
+                  text: "Announce Pyth Network collaboration",
+                  status: StatusChoice.Completed,
+                },
+                {
+                  type: ItemType.Community,
+                  text: "Announce Cabana Exchange collaboration",
+                  status: StatusChoice.Completed,
+                },
+                {
+                  type: ItemType.Community,
+                  text: "Initialize a bug bounty program for OPX paper trading",
                   status: StatusChoice.Todo,
                 },
                 {
                   type: ItemType.Community,
-                  text: "Host a Competition for OPX",
+                  text: "Introduced $LABS price bot in Epicentral Discord",
+                  status: StatusChoice.Completed,
+                },
+                {
+                  type: ItemType.Community,
+                  text: "Host 3 AMA calls on X/Twitter (2)",
+                  status: StatusChoice.InProgress,
+                },
+                {
+                  type: ItemType.Community,
+                  text: "Epicentral X/Twitter account reaches 1,000 followers",
+                  status: StatusChoice.Completed,
+                },
+                {
+                  type: ItemType.Community,
+                  text: "Epicentral DAO records its 100th proposal on-chain via Realms",
+                  status: StatusChoice.Completed,
+                },
+                {
+                  type: ItemType.Technical,
+                  text: "Hello Moon partnership proposal - MVP Delivery",
+                  status: StatusChoice.Completed,
+                },
+                {
+                  type: ItemType.Technical,
+                  text: "Deploy Revshare Staking Program",
+                  status: StatusChoice.InProgress,
+                },
+                {
+                  type: ItemType.Technical,
+                  text: "Publish documentation page",
+                  status: StatusChoice.InProgress,
+                },
+                {
+                  type: ItemType.Community,
+                  text: "Launch open-market fundraising Campaign",
+                  status: StatusChoice.Completed,
+                },
+                {
+                  type: ItemType.Technical,
+                  text: "Create Solana Option Program",
+                  status: StatusChoice.Completed,
+                },
+                {
+                  type: ItemType.Technical,
+                  text: "OPX Paper Trading",
+                  status: StatusChoice.InProgress,
+                },
+                {
+                  type: ItemType.Technical,
+                  text: "Create OPX fee model",
+                  status: StatusChoice.Completed,
+                },
+                {
+                  type: ItemType.Technical,
+                  text: "OPX - Option Margin Liquidity Pool (OMLP)",
+                  status: StatusChoice.InProgress,
+                },
+              ]}
+            />
+
+            <div className="blur-sm">
+              <RoadmapCard
+              quarter="Q4 2025"
+              title="Awareness & Adoption"
+              status={StatusChoice.InProgress}
+              description="Create a community-driven initiative to raise awareness about OPX and Options Trading."
+              items={[
+                {
+                type: ItemType.Community,
+                text: "Create educational content for OPX/Options Trading",
+                status: StatusChoice.Todo,
+                },
+                {
+                type: ItemType.Community,
+                text: "Speak or mention of OPX/Options at Solana Breakpoint 2025",
+                status: StatusChoice.Todo,
+                },
+                {
+                type: ItemType.Technical,
+                text: "Create Video Content page for SOS SDK, Options Trading, and more",
+                status: StatusChoice.Todo,
+                },
+                {
+                type: ItemType.Technical,
+                text: "Integrate Options into more DeFi Protocols",
+                status: StatusChoice.Todo,
+                },
+                {
+                  type: ItemType.Technical,
+                  text: "SOS SDK - Utilizing Option Pricing Model (OPM)",
+                  status: StatusChoice.Completed,
+                },
+                {
+                  type: ItemType.Technical,
+                  text: "SOS SDK - Option Program CPI",
+                  status: StatusChoice.Todo,
+                },
+                {
+                  type: ItemType.Technical,
+                  text: "SOS SDK - Option Margin Liquidity Pool (OMLP)",
+                  status: StatusChoice.Todo,
+                },
+                {
+                  type: ItemType.Technical,
+                  text: "SOS SDK - Option Pricing Model (OPM)",
+                  status: StatusChoice.Todo,
+                },
+                {
+                  type: ItemType.Technical,
+                  text: "SOS SDK - Option Programs",
                   status: StatusChoice.Todo,
                 },
                 {
@@ -244,112 +368,20 @@ export default function RoadmapPage() {
                 },
                 {
                   type: ItemType.Technical,
-                  text: "OPX - Devnet Deployment",
-                  status: StatusChoice.InProgress,
+                  text: "Integrate Options into other DeFi Protocols (DeFiTuna, Adrena, etc.)",
+                  status: StatusChoice.Todo,
                 },
                 {
-                  type: ItemType.Technical,
-                  text: "LABS Staking Platform",
-                  status: StatusChoice.InProgress,
+                  type: ItemType.Community,
+                  text: "Create trade leaderboard for OPX paper trading competition",
+                  status: StatusChoice.Todo,
+                },
+                {
+                  type: ItemType.Community,
+                  text: "Host a competition for OPX paper trading",
+                  status: StatusChoice.Todo,
                 },
               ]}
-            />
-
-            <div className="blur-sm">
-              <RoadmapCard
-                quarter="Q3 2025"
-                title="Education & Implementation"
-                status={StatusChoice.InProgress}
-                description="Teach the Solana Ecosystem about Options, Implement Options into other DeFi Protocols, and more."
-                items={[
-                  {
-                    type: ItemType.Technical,
-                    text: "OPX - Mainnet Deployment",
-                    status: StatusChoice.Todo,
-                  },
-                  {
-                    type: ItemType.Community,
-                    text: "Create educational content for OPX/Options Trading",
-                    status: StatusChoice.Todo,
-                  },
-                  {
-                    type: ItemType.Community,
-                    text: "Create X/Twitter Marketing Campaign",
-                    status: StatusChoice.Todo,
-                  },
-                  {
-                    type: ItemType.Technical,
-                    text: "Implement Programmable Fee Model via DAO proposals",
-                    status: StatusChoice.Todo,
-                  },
-                  {
-                    type: ItemType.Technical,
-                    text: "Integrate Options into other DeFi Protocols (DeFiTuna, Adrena, etc.)",
-                    status: StatusChoice.Todo,
-                  },
-                  {
-                    type: ItemType.Technical,
-                    text: "Create Video Content for SOS SDK, Options Trading, and more",
-                    status: StatusChoice.Todo,
-                  },
-                  {
-                    type: ItemType.Technical,
-                    text: "Create Trade Leaderboard for OPX",
-                    status: StatusChoice.Todo,
-                  },
-                  {
-                    type: ItemType.Technical,
-                    text: "SOS SDK - Utilizing Option Pricing Model (OPM)",
-                    status: StatusChoice.Todo,
-                  },
-                  {
-                    type: ItemType.Technical,
-                    text: "SOS SDK - Option Program CPI",
-                    status: StatusChoice.Todo,
-                  },
-                  {
-                    type: ItemType.Technical,
-                    text: "SOS SDK - Option Margin Liquidity Pool (OMLP)",
-                    status: StatusChoice.Todo,
-                  },
-                  {
-                    type: ItemType.Technical,
-                    text: "SOS SDK - Option Pricing Model (OPM)",
-                    status: StatusChoice.Todo,
-                  },
-                  {
-                    type: ItemType.Technical,
-                    text: "SOS SDK - Option Programs",
-                    status: StatusChoice.Todo,
-                  },
-                ]}
-              />
-            </div>
-
-            <div className="blur-sm">
-              <RoadmapCard
-                quarter="Q4 2025"
-                title="Awareness & Adoption"
-                status={StatusChoice.InProgress}
-                description="Create a community-driven initiative to raise awareness about OPX and Options Trading."
-                items={[
-                  {
-                    type: ItemType.Community,
-                    text: "Create educational content for OPX/Options Trading",
-                    status: StatusChoice.Todo,
-                  },
-                  {
-                    type: ItemType.Community,
-                    text: "Speak or mention of OPX/Options at Solana Breakpoint 2025",
-                    status: StatusChoice.Todo,
-                  },
-
-                  {
-                    type: ItemType.Technical,
-                    text: "Integrate Options into more DeFi Protocols",
-                    status: StatusChoice.Todo,
-                  },
-                ]}
               />
             </div>
             {/* Add more RoadmapCard components as needed */}
