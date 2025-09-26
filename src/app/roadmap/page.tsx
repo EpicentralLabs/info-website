@@ -243,11 +243,6 @@ export default function RoadmapPage() {
                 },
                 {
                   type: ItemType.Community,
-                  text: "Initialize a bug bounty program for OPX paper trading",
-                  status: StatusChoice.Todo,
-                },
-                {
-                  type: ItemType.Community,
                   text: "Introduced $LABS price bot in Epicentral Discord",
                   status: StatusChoice.Completed,
                 },
@@ -273,8 +268,8 @@ export default function RoadmapPage() {
                 },
                 {
                   type: ItemType.Technical,
-                  text: "Deploy Revshare Staking Program",
-                  status: StatusChoice.InProgress,
+                  text: "Create Revshare Staking Program",
+                  status: StatusChoice.Completed,
                 },
                 {
                   type: ItemType.Technical,
@@ -309,37 +304,46 @@ export default function RoadmapPage() {
               ]}
             />
 
-            <div className="blur-sm">
-              <RoadmapCard
+            <RoadmapCard
               quarter="Q4 2025"
               title="Awareness & Adoption"
               status={StatusChoice.InProgress}
               description="Create a community-driven initiative to raise awareness about OPX and Options Trading."
               items={[
                 {
-                type: ItemType.Community,
-                text: "Create educational content for OPX/Options Trading",
-                status: StatusChoice.Todo,
+                  type: ItemType.Community,
+                  text: "Create educational content for OPX/Options Trading",
+                  status: StatusChoice.Todo,
                 },
                 {
-                type: ItemType.Community,
-                text: "Speak or mention of OPX/Options at Solana Breakpoint 2025",
-                status: StatusChoice.Todo,
+                  type: ItemType.Community,
+                  text: "Speak or mention of OPX/Options at Solana Breakpoint 2025",
+                  status: StatusChoice.Todo,
                 },
                 {
-                type: ItemType.Technical,
-                text: "Create Video Content page for SOS SDK, Options Trading, and more",
-                status: StatusChoice.Todo,
+                  type: ItemType.Community,
+                  text: "Create trade leaderboard for OPX paper trading competition",
+                  status: StatusChoice.Todo,
                 },
                 {
-                type: ItemType.Technical,
-                text: "Integrate Options into more DeFi Protocols",
-                status: StatusChoice.Todo,
+                  type: ItemType.Community,
+                  text: "Initialize a bug bounty program for OPX paper trading",
+                  status: StatusChoice.Todo,
+                },
+                {
+                  type: ItemType.Community,
+                  text: "Host a competition for OPX paper trading",
+                  status: StatusChoice.Todo,
                 },
                 {
                   type: ItemType.Technical,
-                  text: "SOS SDK - Utilizing Option Pricing Model (OPM)",
-                  status: StatusChoice.Completed,
+                  text: "Deploy Revshare Staking Program",
+                  status: StatusChoice.InProgress,
+                },
+                {
+                  type: ItemType.Technical,
+                  text: "Create Video Content page for SOS SDK, Options Trading, and more",
+                  status: StatusChoice.Todo,
                 },
                 {
                   type: ItemType.Technical,
@@ -354,7 +358,7 @@ export default function RoadmapPage() {
                 {
                   type: ItemType.Technical,
                   text: "SOS SDK - Option Pricing Model (OPM)",
-                  status: StatusChoice.Todo,
+                  status: StatusChoice.Completed,
                 },
                 {
                   type: ItemType.Technical,
@@ -371,19 +375,8 @@ export default function RoadmapPage() {
                   text: "Integrate Options into other DeFi Protocols (DeFiTuna, Adrena, etc.)",
                   status: StatusChoice.Todo,
                 },
-                {
-                  type: ItemType.Community,
-                  text: "Create trade leaderboard for OPX paper trading competition",
-                  status: StatusChoice.Todo,
-                },
-                {
-                  type: ItemType.Community,
-                  text: "Host a competition for OPX paper trading",
-                  status: StatusChoice.Todo,
-                },
               ]}
-              />
-            </div>
+            />
             {/* Add more RoadmapCard components as needed */}
           </div>
         </div>
