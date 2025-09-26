@@ -272,11 +272,6 @@ export default function RoadmapPage() {
                   status: StatusChoice.Completed,
                 },
                 {
-                  type: ItemType.Technical,
-                  text: "Publish documentation page",
-                  status: StatusChoice.InProgress,
-                },
-                {
                   type: ItemType.Community,
                   text: "Launch open-market fundraising Campaign",
                   status: StatusChoice.Completed,
@@ -288,7 +283,7 @@ export default function RoadmapPage() {
                 },
                 {
                   type: ItemType.Technical,
-                  text: "OPX Paper Trading",
+                  text: "Launch OPX Paper Trading",
                   status: StatusChoice.InProgress,
                 },
                 {
@@ -308,12 +303,17 @@ export default function RoadmapPage() {
               quarter="Q4 2025"
               title="Awareness & Adoption"
               status={StatusChoice.InProgress}
-              description="Create a community-driven initiative to raise awareness about OPX and Options Trading."
+              description="Drive protocol user count, Raise ecosystem awareness about OPX, and create educational content about options trading."
               items={[
                 {
                   type: ItemType.Community,
                   text: "Create educational content for OPX/Options Trading",
                   status: StatusChoice.Todo,
+                },
+                {
+                  type: ItemType.Technical,
+                  text: "Publish documentation page",
+                  status: StatusChoice.InProgress,
                 },
                 {
                   type: ItemType.Community,
