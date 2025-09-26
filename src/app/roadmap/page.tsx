@@ -304,12 +304,7 @@ export default function RoadmapPage() {
               title="Awareness & Adoption"
               status={StatusChoice.InProgress}
               description="Drive protocol user count, Raise ecosystem awareness about OPX, and create educational content about options trading."
-              items={[
-                {
-                  type: ItemType.Community,
-                  text: "Create educational content for OPX/Options Trading",
-                  status: StatusChoice.Todo,
-                },
+              items={[                
                 {
                   type: ItemType.Technical,
                   text: "Publish documentation page",
@@ -317,12 +312,12 @@ export default function RoadmapPage() {
                 },
                 {
                   type: ItemType.Community,
-                  text: "Speak or mention of OPX/Options at Solana Breakpoint 2025",
-                  status: StatusChoice.Todo,
+                  text: "Epicentral X/Twitter account reaches 1,500 followers",
+                  status: StatusChoice.InProgress,
                 },
                 {
                   type: ItemType.Community,
-                  text: "Create trade leaderboard for OPX paper trading competition",
+                  text: "Create trade leaderboard for OPX paper trading",
                   status: StatusChoice.Todo,
                 },
                 {
@@ -332,7 +327,7 @@ export default function RoadmapPage() {
                 },
                 {
                   type: ItemType.Community,
-                  text: "Host a competition for OPX paper trading",
+                  text: "Host OPX paper trading competition",
                   status: StatusChoice.Todo,
                 },
                 {
@@ -353,7 +348,7 @@ export default function RoadmapPage() {
                 {
                   type: ItemType.Technical,
                   text: "SOS SDK - Option Margin Liquidity Pool (OMLP)",
-                  status: StatusChoice.Todo,
+                  status: StatusChoice.InProgress,
                 },
                 {
                   type: ItemType.Technical,
@@ -363,12 +358,12 @@ export default function RoadmapPage() {
                 {
                   type: ItemType.Technical,
                   text: "SOS SDK - Option Programs",
-                  status: StatusChoice.Todo,
+                  status: StatusChoice.InProgress,
                 },
                 {
                   type: ItemType.Technical,
                   text: "OPX - Release for Beta",
-                  status: StatusChoice.Todo,
+                  status: StatusChoice.InProgress,
                 },
                 {
                   type: ItemType.Technical,
