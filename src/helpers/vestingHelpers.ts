@@ -1,7 +1,7 @@
 /**
  * Calculates the progress in months from a given start date, with a maximum cap of 16 months.
  * @param {Date} START_DATE - The starting date to calculate progress from.
- * @returns {number} The number of months passed since the start date, clamped between 0 and 16.
+ * @returns {number} The number of months passed since the start date, clamped between 0 and 18.
  */
 export const calculateTimeProgress = (START_DATE: Date): number => {
     const now = new Date();
