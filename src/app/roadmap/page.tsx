@@ -357,11 +357,6 @@ export default function RoadmapPage() {
                 },
                 {
                   type: ItemType.Technical,
-                  text: "SOS SDK - Option Program CPI",
-                  status: StatusChoice.InProgress,
-                },
-                {
-                  type: ItemType.Technical,
                   text: "SOS SDK - Option Pricing Model (OPM)",
                   status: StatusChoice.Completed,
                 },
