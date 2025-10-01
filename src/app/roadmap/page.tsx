@@ -218,7 +218,7 @@ export default function RoadmapPage() {
             <RoadmapCard
               quarter="Q3 2025"
               title="OPX - Solana's Official Options Exchange"
-              status={StatusChoice.InProgress}
+              status={StatusChoice.Completed}
               description="Front-end finalization, Back-end Collaboration, and Fundraising for OPX - Solana's first official options exchange"
               items={[
                 {
@@ -283,18 +283,8 @@ export default function RoadmapPage() {
                 },
                 {
                   type: ItemType.Technical,
-                  text: "Launch OPX Paper Trading",
-                  status: StatusChoice.InProgress,
-                },
-                {
-                  type: ItemType.Technical,
                   text: "Create OPX fee model",
                   status: StatusChoice.Completed,
-                },
-                {
-                  type: ItemType.Technical,
-                  text: "OPX - Option Margin Liquidity Pool (OMLP)",
-                  status: StatusChoice.InProgress,
                 },
               ]}
             />
@@ -305,11 +295,6 @@ export default function RoadmapPage() {
               status={StatusChoice.InProgress}
               description="Drive protocol user count, Raise ecosystem awareness about OPX, and create educational content about options trading."
               items={[                
-                {
-                  type: ItemType.Technical,
-                  text: "Publish documentation page",
-                  status: StatusChoice.InProgress,
-                },
                 {
                   type: ItemType.Community,
                   text: "Epicentral X/Twitter account reaches 1,500 followers",
@@ -331,23 +316,43 @@ export default function RoadmapPage() {
                   status: StatusChoice.Todo,
                 },
                 {
+                  type: ItemType.Community,
+                  text: "Create Video Content page for SOS SDK, Options Trading, and more",
+                  status: StatusChoice.Todo,
+                },
+                {
+                  type: ItemType.Technical,
+                  text: "Publish documentation page",
+                  status: StatusChoice.InProgress,
+                },
+                {
                   type: ItemType.Technical,
                   text: "Deploy Revshare Staking Program",
                   status: StatusChoice.InProgress,
                 },
                 {
                   type: ItemType.Technical,
-                  text: "Create Video Content page for SOS SDK, Options Trading, and more",
-                  status: StatusChoice.Todo,
+                  text: "Launch OPX Paper Trading",
+                  status: StatusChoice.InProgress,
+                },
+                {
+                  type: ItemType.Technical,
+                  text: "Deploy OMLP Program",
+                  status: StatusChoice.InProgress,
+                },
+                {
+                  type: ItemType.Technical,
+                  text: "OMLP - Integrate ORCA into SAP2",
+                  status: StatusChoice.InProgress,
+                },
+                {
+                  type: ItemType.Technical,
+                  text: "OMLP - Create SAP1 In-house Liquidity Pool",
+                  status: StatusChoice.InProgress,
                 },
                 {
                   type: ItemType.Technical,
                   text: "SOS SDK - Option Program CPI",
-                  status: StatusChoice.Todo,
-                },
-                {
-                  type: ItemType.Technical,
-                  text: "SOS SDK - Option Margin Liquidity Pool (OMLP)",
                   status: StatusChoice.InProgress,
                 },
                 {
@@ -357,12 +362,22 @@ export default function RoadmapPage() {
                 },
                 {
                   type: ItemType.Technical,
-                  text: "SOS SDK - Option Programs",
+                  text: "Launch xLABS Revenue Sharing Token (RST)",
+                  status: StatusChoice.InProgress,
+                },
+                {
+                  type: ItemType.Technical,
+                  text: "SOS SDK - Option Program",
                   status: StatusChoice.InProgress,
                 },
                 {
                   type: ItemType.Technical,
                   text: "OPX - Release for Beta",
+                  status: StatusChoice.InProgress,
+                },
+                {
+                  type: ItemType.Technical,
+                  text: "Deploy Option Program",
                   status: StatusChoice.InProgress,
                 },
                 {
