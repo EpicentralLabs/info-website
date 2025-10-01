@@ -307,6 +307,11 @@ export default function RoadmapPage() {
                 },
                 {
                   type: ItemType.Community,
+                  text: "Stake LABS from DAO treasury wallet to earn revenue",
+                  status: StatusChoice.Todo,
+                },
+                {
+                  type: ItemType.Community,
                   text: "Initialize a bug bounty program for OPX paper trading",
                   status: StatusChoice.Todo,
                 },
