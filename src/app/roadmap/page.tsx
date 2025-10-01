@@ -347,12 +347,7 @@ export default function RoadmapPage() {
                 },
                 {
                   type: ItemType.Technical,
-                  text: "OMLP - Integrate ORCA into SAP2",
-                  status: StatusChoice.InProgress,
-                },
-                {
-                  type: ItemType.Technical,
-                  text: "OMLP - Create SAP1 In-house Liquidity Pool",
+                  text: "OMLP - Initialize Single Asset Pools",
                   status: StatusChoice.InProgress,
                 },
                 {
