@@ -5,7 +5,7 @@
  */
 export const calculateTimeProgress = (START_DATE: Date): number => {
     const now = new Date();
-    const monthDiff = (now.getTime() - START_DATE.getTime()) / (1000 * 60 * 60 * 24 * 30.44);
+    const monthDiff = (now.getTime() - START_DATE.getTime()) / (1000 * 60 * 60 * 24 * 28.7); // Average month length in days
     return Math.max(0, Math.min(16, monthDiff));
   };
   
@@ -36,10 +36,10 @@ export const calculateTimeProgress = (START_DATE: Date): number => {
       return 'Vesting starts in ' + Math.ceil((START_DATE.getTime() - now.getTime()) / (1000 * 60 * 60 * 24)) + ' days';
     }
     const monthProgress = calculateTimeProgress(START_DATE);
-    if (monthProgress >= 16) {
+    if (monthProgress >= 18) {
       return 'Vesting completed';
     }
-    return `Month ${Math.floor(monthProgress) + 1} of 16`;
+    return `Month ${Math.floor(monthProgress) + 1} of 18`;
   };
   
   /**
