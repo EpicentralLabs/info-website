@@ -24,7 +24,7 @@ export const vestingScheduleData = [
   { month: 'Month 11', defi: 910877, dao: 728701, team: 182175, marketing: 0, contributors: 0 },
   { month: 'Month 12', defi: 910877, dao: 728701, team: 182175, marketing: 0, contributors: 0 },
   { month: 'Month 13', defi: 910877, dao: 0, team: 182175, marketing: 0, contributors: 0 },
-  { month: 'Month 14', defi: 0, dao: 0, team: 182175, marketing: 0, contributors: 0 },
+  { month: 'Month 14', defi: 910877, dao: 0, team: 182175, marketing: 0, contributors: 0 },
   { month: 'Month 15', defi: 0, dao: 0, team: 182175, marketing: 0, contributors: 0 },
   { month: 'Month 16', defi: 0, dao: 0, team: 182175, marketing: 0, contributors: 0 },
 ];
