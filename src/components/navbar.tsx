@@ -94,12 +94,19 @@ export default function Navbar() {
             </div>
 
             {/* Add Funding Participants Link */}
-            <Link 
-              href="/funding-participants"
-              className="text-sm font-medium text-[#4a85ff] opacity-80 hover:opacity-100 transition-all drop-shadow-[0_0_0.3rem_#4a85ff] hover:drop-shadow-[0_0_0.5rem_#4a85ff] duration-300"
-            >
-              Funding Campaign
-            </Link>
+            <div className="relative group">
+              <Link 
+                href="/funding-participants"
+                className="text-sm font-medium opacity-80 hover:opacity-100 transition-all duration-300"
+              >
+                Funding Campaign
+              </Link>
+              <div className="absolute left-1/2 -translate-x-1/2 top-6 z-20 opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-200 whitespace-nowrap">
+                <div className="bg-black/80 backdrop-blur-md border border-white/20 rounded-lg p-2 shadow-lg">
+                  <p className="text-xs text-white/90">Campaign Ended</p>
+                </div>
+              </div>
+            </div>
 
             {/* Social Icons */}
             <div className="flex items-center space-x-6">
