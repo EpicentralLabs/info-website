@@ -110,43 +110,59 @@ export default function FundingParticipantsPage() {
                     <div className="space-y-3">
                       {/* Goal Item */}
                       <div className="bg-gradient-to-br from-white/5 to-white/[0.02] rounded-xl p-2 md:p-4 border border-white/10 hover:border-white/20 transition-all duration-300">
-                        <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3">
-                          {/* Goal Title with Checkmark */}
-                          <div className="flex items-center gap-2 flex-1">
-                            {/* Green Checkmark */}
-                            <div className="flex-shrink-0">
-                              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="drop-shadow-[0_0_6px_#22c55e] sm:w-5 sm:h-5">
-                                <circle cx="12" cy="12" r="12" fill="#22c55e" fillOpacity="0.15" />
-                                <path d="M7 13.5L10.5 17L17 10.5" stroke="#22c55e" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
-                              </svg>
+                        <div className="space-y-3">
+                          {/* Goal Title with Checkmark and Progress Bar - Horizontal Layout */}
+                          <div className="flex flex-col lg:flex-row lg:items-start gap-3 lg:gap-8">
+                            {/* Left Side: Checkmark + Title */}
+                            <div className="flex items-center gap-2 flex-1">
+                              {/* Green Checkmark */}
+                              <div className="flex-shrink-0">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="drop-shadow-[0_0_6px_#22c55e] sm:w-5 sm:h-5">
+                                  <circle cx="12" cy="12" r="12" fill="#22c55e" fillOpacity="0.15" />
+                                  <path d="M7 13.5L10.5 17L17 10.5" stroke="#22c55e" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
+                              </div>
+                              
+                              {/* Goal Title */}
+                              <div className="text-white/75 font-medium text-sm sm:text-base md:text-lg text-left">
+                                Hello Moon Collaboration/Partnership - Finalize OPX Build
+                              </div>
                             </div>
                             
-                            {/* Goal Title - Left aligned */}
-                            <a 
-                              href="https://v2.realms.today/dao/5PP7vKjJyLw1MR55LoexRsCj3CpZj9MdD6aNXRrvxG42/proposal/HRCn9Ti4GzEiA2i7rRV74osCxwxPK9i5pDVzfy8phSgT"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-white/75 font-medium text-sm sm:text-base md:text-lg text-left underline decoration-dotted decoration-white/30 hover:decoration-[#4a85ff] transition-colors duration-300"
-                            >
-                              Hello Moon Collaboration/Partnership - Finalize OPX Build
-                            </a>
-                          </div>
-                          
-                          {/* Progress Bar */}
-                          <div className="flex-shrink-0 min-w-[180px] sm:min-w-[200px] lg:min-w-[250px]">
-                            <div className="space-y-1.5">
-                              <div className="flex justify-between items-center text-xs sm:text-sm">
-                                <span className="text-white/70">Goal: {formatCurrency(20000)}</span>
-                                <span className="text-green-400 font-semibold drop-shadow-[0_0_8px_rgba(34,197,94,0.8)]">{Math.min(100, Math.round((totalUsdcRaised / 20000) * 100))}%</span>
-                              </div>
-                              <div className="w-full bg-white/10 rounded-full h-1 sm:h-1.5 overflow-hidden shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]">
-                                <div 
-                                  className="h-full bg-green-400 rounded-full transition-all duration-1000 ease-out shadow-[0_0_12px_rgba(34,197,94,0.8),0_0_24px_rgba(34,197,94,0.4)]"
-                                  style={{ width: `${Math.min(100, (totalUsdcRaised / 20000) * 100)}%` }}
-                                />
-                              </div>
-                              <div className="text-xs text-white/60 text-right">
-                                {formatCurrency(totalUsdcRaised)} raised
+                            {/* Right Side: Progress Bar + Button */}
+                            <div className="flex-shrink-0 min-w-[180px] sm:min-w-[200px] lg:min-w-[250px]">
+                              <div className="space-y-2">
+                                <div className="flex justify-between items-center text-xs sm:text-sm">
+                                  <span className="text-white/70">Goal: {formatCurrency(20000)}</span>
+                                  <span className="text-green-400 font-semibold drop-shadow-[0_0_8px_rgba(34,197,94,0.8)]">{Math.min(100, Math.round((totalUsdcRaised / 20000) * 100))}%</span>
+                                </div>
+                                <div className="w-full bg-white/10 rounded-full h-1 sm:h-1.5 overflow-hidden shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]">
+                                  <div 
+                                    className="h-full bg-green-400 rounded-full transition-all duration-1000 ease-out shadow-[0_0_12px_rgba(34,197,94,0.8),0_0_24px_rgba(34,197,94,0.4)]"
+                                    style={{ width: `${Math.min(100, (totalUsdcRaised / 20000) * 100)}%` }}
+                                  />
+                                </div>
+                                <div className="text-xs text-white/60 text-right">
+                                  {formatCurrency(totalUsdcRaised)} raised
+                                </div>
+                                
+                                {/* View Proposal Button - Right aligned below progress */}
+                                <div className="flex justify-end pt-1">
+                                  <a 
+                                    href="https://v2.realms.today/dao/5PP7vKjJyLw1MR55LoexRsCj3CpZj9MdD6aNXRrvxG42/proposal/HRCn9Ti4GzEiA2i7rRV74osCxwxPK9i5pDVzfy8phSgT"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-transparent hover:bg-white/5 border border-white/40 hover:border-white/60 rounded-md text-white/80 hover:text-white font-medium text-xs transition-all duration-300 shadow-sm hover:shadow-[0_0_10px_rgba(255,255,255,0.15)]"
+                                  >
+                                    <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                    </svg>
+                                    View Proposal
+                                    <svg className="w-2.5 h-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                  </a>
+                                </div>
                               </div>
                             </div>
                           </div>
