@@ -1,6 +1,6 @@
 {
   "name": "info-website",
-  "version": "0.12.3",
+  "version": "0.12.4",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -13,6 +13,7 @@
     "dedupe": "pnpm dedupe"
   },
   "dependencies": {
+    "@heroui/accordion": "^2.2.23",
     "@radix-ui/react-accordion": "^1.2.8",
     "@radix-ui/react-dropdown-menu": "^2.1.12",
     "@radix-ui/react-separator": "^1.1.4",

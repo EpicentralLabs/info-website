@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Card } from "@/components/ui/card";
+import { Accordion, AccordionItem } from "@heroui/accordion";
 import { FundingParticipantEntry } from '@/types/fundingParticipants';
 import { fetchAllFundingRoundData, calculateTotalUsdcRaised } from '@/utils/api/useFetchFundingParticipantsData';
 
@@ -184,9 +185,14 @@ export default function FundingParticipantsPage() {
                             </div>
                             
                             {/* Goal Title - Left aligned */}
-                            <div className="text-white/75 font-medium text-sm sm:text-base md:text-lg decoration-white/30 text-left">
+                            <a 
+                              href="https://v2.realms.today/dao/5PP7vKjJyLw1MR55LoexRsCj3CpZj9MdD6aNXRrvxG42/proposal/HRCn9Ti4GzEiA2i7rRV74osCxwxPK9i5pDVzfy8phSgT"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-white/75 font-medium text-sm sm:text-base md:text-lg text-left underline decoration-dotted decoration-white/30 hover:decoration-[#4a85ff] transition-colors duration-300"
+                            >
                               Hello Moon Collaboration/Partnership - Finalize OPX Build
-                            </div>
+                            </a>
                           </div>
                           
                           {/* Progress Bar */}
@@ -209,27 +215,193 @@ export default function FundingParticipantsPage() {
                           </div>
                         </div>
                         
-                        {/* Action Buttons */}
-                        <div className="flex flex-row gap-2 mt-4 pt-4 border-t border-white/10">
-                          <a
-                            href="https://cabana.exchange/token/LABSh5DTebUcUbEoLzXKCiXFJLecDFiDWiBGUU1GpxR/?partner=Epicentral"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center gap-1 sm:gap-2 bg-[#FFFFFF]/70 hover:bg-[#FFFFFF]/90 text-black font-semibold px-2 py-1 sm:px-4 sm:py-1.5 rounded-lg transition-all duration-300 hover:scale-95 shadow-lg hover:shadow-xl text-xs sm:text-sm w-[140px] sm:w-[160px]"
+                        {/* Participants Accordion */}
+                        <div className="mt-4 pt-4 border-t border-white/10">
+                          <Accordion 
+                            isCompact
+                            variant="splitted"
+                            className="px-0"
+                            itemClasses={{
+                              base: "px-0 bg-transparent border-none shadow-none",
+                              title: "text-lg md:text-xl font-medium text-white/90",
+                              trigger: "px-0 py-2 hover:bg-white/5 transition-colors rounded-lg",
+                              content: "px-0 pb-0 pt-2",
+                              indicator: "text-white/70 transition-transform duration-200"
+                            }}
                           >
-                            Join Fundraiser
-                            <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                            </svg>
-                          </a>
-                          <a
-                            href="https://v2.realms.today/dao/5PP7vKjJyLw1MR55LoexRsCj3CpZj9MdD6aNXRrvxG42/proposal/HRCn9Ti4GzEiA2i7rRV74osCxwxPK9i5pDVzfy8phSgT"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center gap-1 sm:gap-2 bg-transparent hover:bg-white/5 text-white/70 border border-white/20 hover:border-white/40 font-medium px-2 py-1 sm:px-4 sm:py-1.5 rounded-lg transition-all duration-300 text-xs sm:text-sm w-[140px] sm:w-[160px]"
-                          >
-                            Learn More
-                          </a>
+                            <AccordionItem 
+                              key="participants" 
+                              aria-label="All Participants" 
+                              title="All Participants"
+                              subtitle={`${participantsData.length} unique buyers • ${formatNumber(participantsData.reduce((sum, entry) => sum + entry.labsQuantity, 0))} $LABS • ${formatCurrency(totalUsdcRaised)} raised`}
+                              classNames={{
+                                subtitle: "text-white/60 text-sm"
+                              }}
+                            >
+                              {/* Desktop Table */}
+                              <div className="hidden md:block overflow-x-auto">
+                                <table className="w-full table-fixed">
+                                  <colgroup>
+                                    <col className="w-[30%]" />
+                                    <col className="w-[25%]" />
+                                    <col className="w-[22.5%]" />
+                                    <col className="w-[22.5%]" />
+                                  </colgroup>
+                                  <thead>
+                                    <tr className="border-b border-white/10">
+                                      <th className="text-left py-4 px-4 text-white/80 font-medium">
+                                        <div className="flex items-center gap-2">
+                                          Wallet Address
+                                          <div className="relative group">
+                                            <svg className="w-4 h-4 text-white/40 hover:text-white/70 transition-colors cursor-help" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                            <div className="absolute left-1/2 -translate-x-1/2 top-6 z-20 opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-200 whitespace-nowrap">
+                                              <div className="bg-black/80 backdrop-blur-md border border-white/20 rounded-lg p-2 shadow-lg">
+                                                <p className="text-xs text-white/90">Solana wallet address of the participant</p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </th>
+                                      <th className="text-right py-4 px-4 text-white/80 font-medium">
+                                        <div className="flex items-center justify-end gap-2">
+                                          $LABS Quantity
+                                          <div className="relative group">
+                                            <svg className="w-4 h-4 text-white/40 hover:text-white/70 transition-colors cursor-help" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                            <div className="absolute right-0 top-6 z-20 opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-200 whitespace-nowrap">
+                                              <div className="bg-black/80 backdrop-blur-md border border-white/20 rounded-lg p-2 shadow-lg">
+                                                <p className="text-xs text-white/90">Amount of $LABS tokens purchased</p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </th>
+                                      <th className="text-right py-4 px-4 text-white/80 font-medium">
+                                        <div className="flex items-center justify-end gap-2">
+                                          % Contributed
+                                          <div className="relative group">
+                                            <svg className="w-4 h-4 text-white/40 hover:text-white/70 transition-colors cursor-help" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                            <div className="absolute right-0 top-6 z-20 opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-200 whitespace-nowrap">
+                                              <div className="bg-black/80 backdrop-blur-md border border-white/20 rounded-lg p-2 shadow-lg">
+                                                <p className="text-xs text-white/90">Percentage of total fundraising contribution</p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </th>
+                                      <th className="text-right py-4 px-4 text-white/80 font-medium">
+                                        <div className="flex items-center justify-end gap-2">
+                                          % Revenue Allocation
+                                          <div className="relative group">
+                                            <svg className="w-4 h-4 text-white/40 hover:text-white/70 transition-colors cursor-help" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                            <div className="absolute right-0 top-6 z-20 opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-200 whitespace-nowrap">
+                                              <div className="bg-black/80 backdrop-blur-md border border-white/20 rounded-lg p-2 shadow-lg">
+                                                <p className="text-xs text-white/90">Share of the 10% OPX revenue for 2 months</p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    {sortedTopParticipants.map((entry) => (
+                                      <tr 
+                                        key={entry.walletAddress} 
+                                        className="border-b border-white/5 hover:bg-white/5 transition-colors"
+                                      >
+                                        <td className="py-4 px-4">
+                                          <a 
+                                            href={`https://solscan.io/account/${entry.walletAddress}`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="font-mono text-white/90 hover:text-white/70 transition-colors duration-300 inline-flex items-center gap-1"
+                                          >
+                                            {formatWalletAddress(entry.walletAddress)}
+                                            <svg className="w-3 h-3 opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                            </svg>
+                                          </a>
+                                        </td>
+                                        <td className="py-4 px-4 text-right">
+                                          <div className="font-semibold text-[#4a85ff]">
+                                            {formatNumber(entry.labsQuantity)}
+                                          </div>
+                                        </td>
+                                        <td className="py-4 px-4 text-right">
+                                          <div className="text-white/80">
+                                            {formatPercentage(entry.percentageAllocation)}
+                                          </div>
+                                        </td>
+                                        <td className="py-4 px-4 text-right">
+                                          <div className="text-green-400 font-semibold">
+                                            {formatPercentage(entry.percentageAllocation * 0.1)}
+                                          </div>
+                                        </td>
+                                      </tr>
+                                    ))}
+                                  </tbody>
+                                </table>
+                              </div>
+
+                              {/* Mobile Cards */}
+                              <div className="md:hidden space-y-2">
+                                {sortedTopParticipants.map((entry) => (
+                                  <div 
+                                    key={entry.walletAddress}
+                                    className="bg-gradient-to-br from-white/5 to-white/[0.02] rounded-lg p-3 border border-white/10"
+                                  >
+                                    <div className="mb-2">
+                                      <a 
+                                        href={`https://solscan.io/account/${entry.walletAddress}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="font-mono text-white/90 hover:text-white/70 transition-colors duration-300 text-sm inline-flex items-center gap-1.5"
+                                      >
+                                        {formatWalletAddress(entry.walletAddress)}
+                                        <svg className="w-3 h-3 opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                        </svg>
+                                      </a>
+                                    </div>
+                                    <div className="grid grid-cols-3 gap-2 text-xs">
+                                      <div className="text-center">
+                                        <div className="text-white/50 mb-1">$LABS</div>
+                                        <div className="font-semibold text-[#4a85ff] text-sm">
+                                          {formatNumber(entry.labsQuantity)}
+                                        </div>
+                                      </div>
+                                      <div className="text-center">
+                                        <div className="text-white/50 mb-1">Contributed</div>
+                                        <div className="text-white/80 text-sm">
+                                          {formatPercentage(entry.percentageAllocation)}
+                                        </div>
+                                      </div>
+                                      <div className="text-center">
+                                        <div className="text-white/50 mb-1">Revenue</div>
+                                        <div className="text-green-400 font-semibold text-sm">
+                                          {formatPercentage(entry.percentageAllocation * 0.1)}
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                ))}
+                              </div>
+
+                              {participantsData.length > 100 && (
+                                <div className="mt-6 text-center text-white/60 text-sm">
+                                  Showing top 100 participants out of {participantsData.length} total unique buyers
+                                </div>
+                              )}
+                            </AccordionItem>
+                          </Accordion>
                         </div>
                       </div>
                     </div>
@@ -238,184 +410,6 @@ export default function FundingParticipantsPage() {
               </div>
             </div>
 
-            {/* Gradient Divider */}
-            <div className="relative mb-12">
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent blur-sm"></div>
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
-              <div className="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent relative"></div>
-            </div>
-
-            {/* Leaderboard Table */}
-            <div className="bg-black/30 backdrop-blur-md border border-white/10 rounded-xl p-4 md:p-6 lg:p-8 
-                            hover:border-white/20 transition-all duration-500 shadow-lg">
-              <h2 className="text-xl md:text-2xl lg:text-3xl font-light text-white/90 mb-2 md:mb-6 drop-shadow-[0_0_0.3rem_#ffffff70]
-                             text-center">
-                All Participants
-              </h2>
-
-                {/* Desktop Table */}
-                <div className="hidden md:block overflow-x-auto">
-                  <table className="w-full table-fixed">
-                    <colgroup>
-                      <col className="w-[30%]" />
-                      <col className="w-[25%]" />
-                      <col className="w-[22.5%]" />
-                      <col className="w-[22.5%]" />
-                    </colgroup>
-                    <thead>
-                      <tr className="border-b border-white/10">
-                        <th className="text-left py-4 px-4 text-white/80 font-medium">
-                          <div className="flex items-center gap-2">
-                            Wallet Address
-                            <div className="relative group">
-                              <svg className="w-4 h-4 text-white/40 hover:text-white/70 transition-colors cursor-help" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                              </svg>
-                              <div className="absolute left-1/2 -translate-x-1/2 top-6 z-20 opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-200 whitespace-nowrap">
-                                <div className="bg-black/80 backdrop-blur-md border border-white/20 rounded-lg p-2 shadow-lg">
-                                  <p className="text-xs text-white/90">Solana wallet address of the participant</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </th>
-                        <th className="text-right py-4 px-4 text-white/80 font-medium">
-                          <div className="flex items-center justify-end gap-2">
-                            $LABS Quantity
-                            <div className="relative group">
-                              <svg className="w-4 h-4 text-white/40 hover:text-white/70 transition-colors cursor-help" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                              </svg>
-                              <div className="absolute right-0 top-6 z-20 opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-200 whitespace-nowrap">
-                                <div className="bg-black/80 backdrop-blur-md border border-white/20 rounded-lg p-2 shadow-lg">
-                                  <p className="text-xs text-white/90">Amount of $LABS tokens purchased</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </th>
-                        <th className="text-right py-4 px-4 text-white/80 font-medium">
-                          <div className="flex items-center justify-end gap-2">
-                            % Contributed
-                            <div className="relative group">
-                              <svg className="w-4 h-4 text-white/40 hover:text-white/70 transition-colors cursor-help" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                              </svg>
-                              <div className="absolute right-0 top-6 z-20 opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-200 whitespace-nowrap">
-                                <div className="bg-black/80 backdrop-blur-md border border-white/20 rounded-lg p-2 shadow-lg">
-                                  <p className="text-xs text-white/90">Percentage of total fundraising contribution</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </th>
-                        <th className="text-right py-4 px-4 text-white/80 font-medium">
-                          <div className="flex items-center justify-end gap-2">
-                            % Revenue Allocation
-                            <div className="relative group">
-                              <svg className="w-4 h-4 text-white/40 hover:text-white/70 transition-colors cursor-help" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                              </svg>
-                              <div className="absolute right-0 top-6 z-20 opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-200 whitespace-nowrap">
-                                <div className="bg-black/80 backdrop-blur-md border border-white/20 rounded-lg p-2 shadow-lg">
-                                  <p className="text-xs text-white/90">Share of the 10% OPX revenue for 2 months</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {sortedTopParticipants.map((entry) => (
-                        <tr 
-                          key={entry.walletAddress} 
-                          className="border-b border-white/5 hover:bg-white/5 transition-colors"
-                        >
-                          <td className="py-4 px-4">
-                            <a 
-                              href={`https://solscan.io/account/${entry.walletAddress}`}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="font-mono text-white/90 hover:text-white/70 transition-colors duration-300 inline-flex items-center gap-1"
-                            >
-                              {formatWalletAddress(entry.walletAddress)}
-                              <svg className="w-3 h-3 opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                              </svg>
-                            </a>
-                          </td>
-                          <td className="py-4 px-4 text-right">
-                            <div className="font-semibold text-[#4a85ff]">
-                              {formatNumber(entry.labsQuantity)}
-                            </div>
-                          </td>
-                          <td className="py-4 px-4 text-right">
-                            <div className="text-white/80">
-                              {formatPercentage(entry.percentageAllocation)}
-                            </div>
-                          </td>
-                          <td className="py-4 px-4 text-right">
-                            <div className="text-green-400 font-semibold">
-                              {formatPercentage(entry.percentageAllocation * 0.1)}
-                            </div>
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-
-                {/* Mobile Cards */}
-                <div className="md:hidden space-y-3">
-                  {sortedTopParticipants.map((entry) => (
-                    <div 
-                      key={entry.walletAddress}
-                      className="bg-gradient-to-br from-white/5 to-white/[0.02] rounded-xl p-4 border border-white/10"
-                    >
-                      <div className="mb-4">
-                        <a 
-                          href={`https://solscan.io/account/${entry.walletAddress}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="font-mono text-white/90 hover:text-white/70 transition-colors duration-300 text-base inline-flex items-center gap-2"
-                        >
-                          {formatWalletAddress(entry.walletAddress)}
-                          <svg className="w-4 h-4 opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                          </svg>
-                        </a>
-                      </div>
-                      <div className="grid grid-cols-1 gap-3 text-sm">
-                        <div className="flex justify-between items-center">
-                          <div className="text-white/60">$LABS Quantity</div>
-                          <div className="font-semibold text-[#4a85ff] text-base">
-                            {formatNumber(entry.labsQuantity)}
-                          </div>
-                        </div>
-                        <div className="flex justify-between items-center">
-                          <div className="text-white/60">% Contributed</div>
-                          <div className="text-white/80 text-base">
-                            {formatPercentage(entry.percentageAllocation)}
-                          </div>
-                        </div>
-                        <div className="flex justify-between items-center">
-                          <div className="text-white/60">Revenue Share</div>
-                          <div className="text-green-400 font-semibold text-base">
-                            {formatPercentage(entry.percentageAllocation * 0.1)}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {participantsData.length > 100 && (
-                  <div className="mt-6 text-center text-white/60 text-sm">
-                    Showing top 100 participants out of {participantsData.length} total unique buyers
-                  </div>
-                )}
-            </div>
           </div>
         </div>
       </main>
