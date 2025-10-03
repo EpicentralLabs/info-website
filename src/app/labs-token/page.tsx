@@ -441,41 +441,47 @@ if (!isMounted) {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
               <div className="bg-black/40 border border-white/10 rounded-xl p-4 md:p-6
-                              hover:border-white/20 transition-all duration-300">
-                <h3 className="text-lg md:text-xl font-medium text-white/90 mb-3 md:mb-4">DeFi Allocation</h3>
-                <div className="space-y-2 text-sm md:text-base text-white/70">
-                  <p>• 14 Month Vesting via Streamflow</p>
-                  <p>• Deposited to DeFi Rewards Vault</p>
-                  <p>
-                    • <a 
-                        href="https://app.streamflow.finance/contract/solana/mainnet/4xcfeTFsJtHJqMy4D7JKuwFeAhg1SeRoBF86M1jtnNJ7" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-[#4a85ff] hover:drop-shadow-[0_0_8px_#4a85ff] transition-all duration-300"
-                      >
-                        Immutable Contract
-                      </a>
-                  </p>
-                </div>
+                      hover:border-white/20 transition-all duration-300">
+              <h3 className="text-lg md:text-xl font-medium text-white/90 mb-3 md:mb-4 flex items-center gap-2">
+                DeFi Allocation
+                <GreenCheckWithTooltip />
+              </h3>
+              <div className="space-y-2 text-sm md:text-base text-white/70">
+                <p>• 14 Month Vesting via Streamflow</p>
+                <p>• Deposited to DeFi Rewards Vault</p>
+                <p>
+                • <a 
+                  href="https://app.streamflow.finance/contract/solana/mainnet/4xcfeTFsJtHJqMy4D7JKuwFeAhg1SeRoBF86M1jtnNJ7" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-[#4a85ff] hover:drop-shadow-[0_0_8px_#4a85ff] transition-all duration-300"
+                  >
+                  Immutable Contract
+                  </a>
+                </p>
+              </div>
               </div>
 
               <div className="bg-black/40 border border-white/10 rounded-xl p-4 md:p-6
-                              hover:border-white/20 transition-all duration-300">
-                <h3 className="text-lg md:text-xl font-medium text-white/90 mb-3 md:mb-4">DAO Treasury</h3>
-                <div className="space-y-2 text-sm md:text-base text-white/70">
-                  <p>• 13 Month Vesting via Streamflow</p>
-                  <p>• Deposited to Main DAO Vault</p>
-                  <p>
-                    • <a 
-                        href="https://app.streamflow.finance/contract/solana/mainnet/FJpB3T4Y73XRrK98VFH7VowR3x1yGpjEUXsuNm841yjo" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-[#4a85ff] hover:drop-shadow-[0_0_8px_#4a85ff] transition-all duration-300"
-                      >
-                        Immutable Contract
-                      </a>
-                  </p>
-                </div>
+                      hover:border-white/20 transition-all duration-300">
+              <h3 className="text-lg md:text-xl font-medium text-white/90 mb-3 md:mb-4 flex items-center gap-2">
+                DAO Treasury
+                <GreenCheckWithTooltip />
+              </h3>
+              <div className="space-y-2 text-sm md:text-base text-white/70">
+                <p>• 13 Month Vesting via Streamflow</p>
+                <p>• Deposited to Main DAO Vault</p>
+                <p>
+                • <a 
+                  href="https://app.streamflow.finance/contract/solana/mainnet/FJpB3T4Y73XRrK98VFH7VowR3x1yGpjEUXsuNm841yjo" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-[#4a85ff] hover:drop-shadow-[0_0_8px_#4a85ff] transition-all duration-300"
+                  >
+                  Immutable Contract
+                  </a>
+                </p>
+              </div>
               </div>
 
               <div className="bg-black/40 border border-white/10 rounded-xl p-4 md:p-6
